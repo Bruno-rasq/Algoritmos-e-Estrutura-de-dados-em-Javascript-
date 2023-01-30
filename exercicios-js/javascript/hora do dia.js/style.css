@@ -1,0 +1,36 @@
+
+:root {
+            --corbody: #007DFF;
+            --corsombra: #3B4844;
+            --corsection: #F8FEFF;
+        }
+
+        body {
+            background-color: var(--corbody);
+            font: 15pt, arial,;
+        }
+        div {
+            text-align: center;
+            padding: 10px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background-color: var(--corsection);
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px var(--corsombra);
+            padding: 30px;
+            width: 250px;
+        }
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            color: white;
+        }

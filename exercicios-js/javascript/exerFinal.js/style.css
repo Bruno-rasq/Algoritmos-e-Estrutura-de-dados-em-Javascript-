@@ -1,0 +1,53 @@
+:root {
+    --corfundo: #6F807F;
+    --corsec: white;
+    --cortitle: #ECECEC;
+    --corshadow: #151716;
+}
+
+    body {
+        background-color: var(--corfundo);
+        font: 18pt;
+    }
+
+    div {
+        padding: 10px;
+    }
+
+    header {
+        text-align: center;
+        color: var(--cortitle);
+        font-family: Arial,Sans-Serif;
+        margin-bottom: 30px;
+    }
+
+    section {
+        background-color: var(--corsec);
+        box-shadow: 3px 3px 3px var(--corshadow);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin: auto;
+        width: 270px;
+    }
+
+    input {
+        border-style: outset;
+        margin-top: 10px;
+    }
+
+    select {
+        margin-top: 10px;
+        width: 200px;
+        height: 100px;
+    }
+    #confirmar {
+        margin-top: 10px;
+    }
+
+    footer {
+        color: var(--cortitle);
+        text-align: center;
+        margin: auto;
+        margin-top: 10px;
+    }

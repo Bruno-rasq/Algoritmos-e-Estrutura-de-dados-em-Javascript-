@@ -1,0 +1,51 @@
+:root {
+    --corfundo: #A261FF;
+    --corsec: white;
+    --cortitle: #ECECEC;
+    --corshadow: #151716;
+}
+
+    body {
+        background-color: var(--corfundo);
+        font: 18pt;
+    }
+
+    div {
+        padding: 10px;
+    }
+
+    header {
+        text-align: center;
+        color: var(--cortitle);
+        font-family: Arial,Sans-Serif;
+        margin-bottom: 30px;
+    }
+
+    section {
+        background-color: var(--corsec);
+        box-shadow: 3px 3px 3px var(--corshadow);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin: auto;
+        width: 270px;
+    }
+
+    input {
+        margin-top: 10px;
+    }
+
+    label {
+        font-size: 10px;
+    }
+
+    #click {
+        margin-top: 10px;
+    }
+
+    footer {
+        color: var(--cortitle);
+        text-align: center;
+        margin: auto;
+        margin-top: 10px;
+    }
