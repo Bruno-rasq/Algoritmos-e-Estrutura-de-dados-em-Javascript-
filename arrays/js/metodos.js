@@ -78,3 +78,15 @@ console.log(F);
 const menorQueZero = F.filter((element) => element >= 0 && element < 10);
 console.log(menorQueZero);
 
+console.log("=======================");
+
+
+//  =============== FOREACH() =====================
+
+const MostrarUsers = (users) => {
+    users.forEach((users) => {
+        console.log(`Olá ${users.nome}`)
+    });
+};
+
+MostrarUsers(data);
