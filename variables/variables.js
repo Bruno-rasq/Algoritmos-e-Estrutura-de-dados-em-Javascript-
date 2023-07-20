@@ -46,40 +46,50 @@
 
 console.log("======== VAR =========");
 
-var num = 22;
+var aaa = "A";
 // var num = 33;com o var é possivel utilizar o mesmo nome de variavel no mesmo escopo
 
 function mostrarNum(){
-    var num = 33;
-    console.log("numero é:" + num);
+    var aaa = "B";
+    console.log(aaa);
 };
 
 if(true){
-    var num = 44; // o if alterou o valor da variavel quando é var
-    console.log(num);
+    var aaa = "C"; // o if alterou o valor da variavel quando é var
+    console.log(aaa);
+};
+
+for(let i = 0; i <= 2; i++){
+    var aaa = "D";
+    console.log(aaa);
 };
 
 mostrarNum();
-console.log(num);
+console.log(aaa);
 
 
 console.log("======== LET =========");
 
-let nume = 22;
+let bbb = 11;
 // let nume = 66; com o let não é permitido usar o mesmo nome de variavel no mesmo escopo
 
 function mostrarNum(){
-    let nume = 33;
-    console.log("numero é:" + nume);
+    let bbb = 22;
+    console.log("numero é:" + bbb);
 };
 
 if(true){
-    let nume = 44; // com o let o if não alterou o valor da variavel
-    console.log(nume);
+    let bbb = 33; // com o let o if não alterou o valor da variavel
+    console.log(bbb);
+};
+
+for(let i = 0; i <= 2; i++){
+    let bbb = 44;
+    console.log(bbb);
 };
 
 mostrarNum();
-console.log(nume);
+console.log(bbb);
 
 console.log("======== CONST =========");
 
