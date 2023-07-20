@@ -16,16 +16,48 @@ const data = [
 let ReverseData = data.reverse();
 console.log(ReverseData); // simplesmente inverte a ordem dos itens 
 
-console.log("=======================")
+console.log("=======================");
+
 
 // ============= FIND ================
 
 // metodo utilizado para encontra algo em um array
 // necessita de alguma lógica que auxilie na procura
-let idadeEstimada = 100;
 
-let MaiorIdade = data.find((users) => {
-    users.idade >= idadeEstimada;
-});
+const C = [2, 5, 45, 65, 3, 0, 10];
 
-console.log(MaiorIdade);
+let Find = C.find((element) => element > 10);
+
+console.log(Find); // obs: retorna o primeiro valor que satisfaz a requisição => mostra só o 45
+
+console.log("=======================");
+
+
+// ============= FINDINDEX() ou INDEXOF() =============
+
+// se precisar encontrar o indice de um valor
+
+const menorIdade = data.findIndex((users) => users.idade >= 25 && users.idade <= 70);
+console.log(menorIdade);
+
+data[menorIdade].nome += " que mario?"; // atribui um valor 
+console.log(data[3].nome); // mostrei o nome de um elemento criminoso
+
+console.log("=======================");
+
+
+// ============== INCLUDES() ======================
+
+// serve para encontrat um valor especifico
+// se tiver retornará um valor booleano true
+// se não tiver retorna false
+
+const D = [1, 2, 4, 3, 5, 6, 43, 23, 10];
+
+let hasFive = D.includes(5);
+let hastwoHundred = D.includes(200);
+console.log(hasFive);
+console.log(hastwoHundred);
+
+console.log("=======================");
+
