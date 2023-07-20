@@ -90,3 +90,30 @@ const MostrarUsers = (users) => {
 };
 
 MostrarUsers(data);
+
+console.log("=======================");
+
+
+// =============== SOME() =======================
+
+// verifica se algum item do array corresponde a uma busca, retornando true ou false
+
+let ShowUsersWichNewsletter = data.some((users) => users.newsletter);
+console.log(ShowUsersWichNewsletter);
+
+data[0].newsletter = true;
+
+ShowUsersWichNewsletter = data.some((users) => users.newsletter);
+console.log(ShowUsersWichNewsletter);
+
+console.log("=======================");
+
+
+
+// =============== EVERY() =======================
+
+// funciona como o oposto do some(), retorna true se todos os itens
+// corresponderem uma requisição, senão retorna false
+
+const EveryUserHasname = data.every((users) => users.nome);
+console.log(EveryUserHasname);
