@@ -1,9 +1,6 @@
 // Alguns métodos utilizados com arrays
 
 
-
-// ============= REVERSE ==============
-
 const data = [
     {nome: "bruno", idade: 22},
     {nome: "joao", idade: 12},
@@ -13,8 +10,12 @@ const data = [
     {nome: "bruna", idade: 19}
 ];
 
+// ============= REVERSE ==============
+
+// simplesmente inverte a ordem dos itens 
+
 let ReverseData = data.reverse();
-console.log(ReverseData); // simplesmente inverte a ordem dos itens 
+console.log(ReverseData); 
 
 console.log("=======================");
 
@@ -60,4 +61,20 @@ console.log(hasFive);
 console.log(hastwoHundred);
 
 console.log("=======================");
+
+
+// =============== MAP() =====================
+
+data.map((users) => users.newsletter = false);
+console.log(data);
+
+console.log("=======================");
+
+
+//  =============== FILTER() =====================
+const F = [1, 4, -5, 6, -10, 20, -3];
+console.log(F);
+
+const menorQueZero = F.filter((element) => element >= 0 && element < 10);
+console.log(menorQueZero);
 
