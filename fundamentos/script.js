@@ -229,3 +229,41 @@ console.warn("console.warn");
 //     console.log(`imprimindo: ${listaDois[index]}`); // template literals
     
 // };
+
+
+
+// //metodos de array - repetições
+
+// const names = ["bruno", "heleno", "julio", "clara"];
+
+// //[forEach]
+// names.forEach(function(name) {
+//     console.log(` o nome é: ${name}`);
+// });
+
+// //[Map]
+// const modificarNames = names.map(function(name){
+//     if(name === "bruno"){
+//         return name = 'mrs bruno';
+//     } else {
+//         return name
+//     };
+// });
+
+// console.log(modificarNames);
+
+// //[filter]
+// const number = [2, 5, 4, -3, 8, -9, -1];
+
+// const NegativeNumber= number.filter(function(numbers){
+//    return numbers < 0;
+// });
+
+// console.log(NegativeNumber);
+
+// //[reduce]
+// const soma = NegativeNumber.reduce(function(total, number){
+//     return total + number;
+// });
+
+// console.log(soma);
