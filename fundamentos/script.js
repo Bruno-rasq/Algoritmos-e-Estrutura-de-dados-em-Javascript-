@@ -69,3 +69,50 @@ console.warn("console.warn");
 // }; 
 // console.log(Object);
 // console.log(typeof Object);
+
+
+
+// método de string
+
+// const nome = "Bruno dias";
+// console.log(nome);
+// console.log("qunatidade de caracteres: " + nome.length);
+
+// let Array = [1,4,5,3,2];
+// console.log(Array);
+// console.log("quantidade de itens: " + Array.length);
+
+// const stringToArray = nome.split(' ');
+// console.log(stringToArray);
+
+// console.log(nome.toLowerCase());
+// console.log(nome.toUpperCase());
+
+// console.log(nome.indexOf('dias'));
+
+// console.log(nome.slice(0, 5)); 
+// console.log(nome.slice(6, 10)); 
+
+
+
+// métodos de array
+
+// let lista = ["A", "b", "B", "c"];
+// console.log(lista);
+
+// console.log(lista[3]); 
+
+// lista[4] = "F"; 
+// console.log(lista);
+
+// console.log(lista[lista.length - 1]); 
+
+// lista.push("G");
+// console.log(lista);
+// lista.pop(); 
+// console.log(lista);
+
+// lista.unshift("N"); 
+// console.log(lista);
+// lista.shift(); 
+// console.log(lista);
