@@ -476,3 +476,35 @@ if((nome_OR == "roberta" || idade_OR == 15) && 1 == 4){
 } else {
     console.log( "teste OR-4: falso")
 };
+
+//[NOT ou !]
+// muda o valor lógico de uma expressão
+// o que era verdadeiro vira falso e vice-versa
+// exm: 2 == 2 -> true
+// exm:2 !== 2 -> false
+
+if( 2 == 2 ){
+    console.log("teste not-01: verdadeiro")
+} else {
+    console.log("teste not-01: falso")
+};
+
+if( 2 !== 2 ){
+    console.log("teste not-02: verdadeiro")
+} else {
+    console.log("teste not-02: falso")
+};
+
+if(!true){
+    console.log("teste not-03: verdadeiro")
+} else {
+    console.log("teste not-03: falso")
+};
+
+let nome_not = "bruno";
+
+if(!(nome_not == "julia")){
+    console.log("teste not-04: verdadeiro")
+} else {
+    console.log("teste not-04: falso")
+};
