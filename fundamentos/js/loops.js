@@ -59,3 +59,26 @@ const soma = NegativeNumber.reduce(function(total, number){
 });
 
 console.log(soma);
+
+
+
+//exercicio de treino
+//criar uma função que receba um array com valores positivos e negativos
+//filtre os valores negativos e some os valores positivos
+
+let array = [5, 10, 1, -5, -2];
+
+function Positivos(arry){
+
+    let newArray = arry.filter((numbers) => {
+       return numbers > 0;
+    });
+
+    console.log(newArray);
+    
+    let total = newArray.reduce((total, valor) => total + valor);
+
+    console.log(total);
+};
+
+Positivos(array);

@@ -599,3 +599,20 @@ console.warn("console.warn");
 // //estruturas como if, for, while se encaixam como escopo global
 // //a menos que estejam dentro do escopo de uma função
 
+
+// let array = [5, 10, 1, -5, -2];
+
+// function Positivos(arry){
+
+//     let newArray = arry.filter((numbers) => {
+//        return numbers > 0;
+//     });
+
+//     console.log(newArray);
+    
+//     let total = newArray.reduce((total, valor) => total + valor);
+
+//     console.log(total);
+// };
+
+// Positivos(array);
