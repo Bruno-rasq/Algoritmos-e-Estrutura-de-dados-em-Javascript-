@@ -39,3 +39,15 @@ function somar(n1, n2){
 };
 
 somar(3, 5);
+
+
+// 04 - retornar um valor com sinal oposto
+// exm: 3 deverá retornar -3 // -4 deverá retornar 4
+
+function ReturnNegative(num){
+
+    return console.log(-num);
+ 
+ };
+ 
+ ReturnNegative(50);

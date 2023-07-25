@@ -600,8 +600,3 @@ console.warn("console.warn");
 // //a menos que estejam dentro do escopo de uma função
 
 
-function somar(n1, n2){
-    return console.log("exercicio 3. resultado da soma: " + (n1 + n2));
-};
-
-somar(3, 5);
