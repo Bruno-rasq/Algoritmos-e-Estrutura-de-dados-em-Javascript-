@@ -600,19 +600,8 @@ console.warn("console.warn");
 // //a menos que estejam dentro do escopo de uma função
 
 
-// let array = [5, 10, 1, -5, -2];
+function somar(n1, n2){
+    return console.log("exercicio 3. resultado da soma: " + (n1 + n2));
+};
 
-// function Positivos(arry){
-
-//     let newArray = arry.filter((numbers) => {
-//        return numbers > 0;
-//     });
-
-//     console.log(newArray);
-    
-//     let total = newArray.reduce((total, valor) => total + valor);
-
-//     console.log(total);
-// };
-
-// Positivos(array);
+somar(3, 5);
