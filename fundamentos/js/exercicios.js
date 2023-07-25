@@ -51,3 +51,24 @@ function ReturnNegative(num){
  };
  
  ReturnNegative(50);
+
+
+ // 05 - função que pegue um valor em anos e retorne um valor em dias
+
+ function ageToDays(age){
+    let days = (age * 365);
+
+    return console.log(days);
+};
+
+ageToDays(4);
+
+// 06 - função que pegue uma string e remova todos os espaços em branco
+
+function spaceRemove(strg){
+    let response = strg.split(/\s+/).join('');  // utiliza expressões regulares
+    // let response = strg.replace(/\s+/g, '');
+    return console.log(response)
+};
+
+spaceRemove("   testendo se funciona");
