@@ -600,10 +600,13 @@ console.warn("console.warn");
 // //a menos que estejam dentro do escopo de uma função
 
 
-function spaceRemove(strg){
-    // let response = strg.split(/\s+/).join('');
-    let response = strg.replace(/\s+/g, '');
-    return console.log(response)
+let array = ["maria", "clara", "bruno", "john"];
+let array2 = ["maria", "clara", "bruno"];
+
+function FindJohn(arry){
+
+    let response = arry.includes("john");
+    console.log(response);
 };
 
-spaceRemove("   testendo se funciona");
+FindJohn(array2);

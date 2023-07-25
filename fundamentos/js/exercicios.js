@@ -13,7 +13,7 @@ function SomaPositivosArray(arry){
     console.log("exercicio 1 " + newarray);
 
     let total = newarray.reduce((total, valor) => total + valor);
-    console.log("exercicio 1 " +total);
+    console.log("exercicio 1 " + total);
 };
 
 SomaPositivosArray([,5 ,-4 ,10, -2, -5]);
@@ -72,3 +72,16 @@ function spaceRemove(strg){
 };
 
 spaceRemove("   testendo se funciona");
+
+// 07 - função que encontre o nome "john" dentro de um array
+
+let array = ["maria", "clara", "bruno", "john"];
+let array2 = ["maria", "clara", "bruno"];
+
+function FindJohn(arry){
+
+    let response = arry.includes("john");
+    console.log(response);
+};
+
+FindJohn(array2);
