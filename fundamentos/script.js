@@ -410,8 +410,8 @@ console.warn("console.warn");
 
 //[AND ou &&]
 // só retorna true caso as duas expressões forem true 
-// exm: 2 > 5 && 2 < 10 -> true
-// exm: 2 > 5 && 2 > 10 -> false
+// exm: 2 < 5 && 2 < 10 -> true
+// exm: 2 > 5 && 2 < 10 -> false
 
 let idade = 16;
 let nome = "bruno";
@@ -442,4 +442,37 @@ if((1 == 1 && 3 < 2) && true){
     console.log("teste 04: verdadeiro")
 } else {
     console.log( "teste 04: falso")
+};
+
+//[OR ou ||]
+// retorna como true caso uma das expressões seja verdadeira
+// exm: 2 < 5 || 2 < 10 -> true
+// exm: 2 > 5 || 2 < 10 -> true
+// exm: 2 > 5 || 2 > 10 -> false
+
+let nome_OR = "julia";
+let idade_OR = 15;
+
+if(nome_OR == "julia" || idade_OR == 18){
+    console.log( "teste OR: verdadeiro")
+} else {
+    console.log( "teste OR: falso")
+};
+
+if(nome_OR == "roberta" || idade_OR == 15){
+    console.log( "teste OR-2: verdadeiro")
+} else {
+    console.log( "teste OR-2: falso")
+};
+
+if(nome_OR == "roberta" || idade_OR == 21){
+    console.log( "teste OR-3: verdadeiro")
+} else {
+    console.log( "teste OR-3: falso")
+};
+
+if((nome_OR == "roberta" || idade_OR == 15) && 1 == 4){
+    console.log( "teste OR-4: verdadeiro")
+} else {
+    console.log( "teste OR-4: falso")
 };
