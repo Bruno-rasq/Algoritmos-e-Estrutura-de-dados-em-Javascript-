@@ -600,13 +600,45 @@ console.warn("console.warn");
 // //a menos que estejam dentro do escopo de uma função
 
 
-let array = ["maria", "clara", "bruno", "john"];
-let array2 = ["maria", "clara", "bruno"];
 
-function FindJohn(arry){
+// // ================ THIS ====================
 
-    let response = arry.includes("john");
-    console.log(response);
-};
+// //fora do escopo local o THIS sempre se refere ao objeto global window
+// // em objeto o THIS vai se referir a instancia e pode acessar suas propriedades
 
-FindJohn(array2);
+// // var teste = 5;
+
+// // console.log(this.teste);
+
+// const pessoa = {
+//     //propriedades chave / valor
+//     name: "bruno",
+//     idade: 22,
+
+//     //métodos 
+//     falar: function(){
+//         console.log("Olá")
+//     },
+
+//     DizerNome: function(){
+//         console.log("o meu nome é " + this.name)
+//     },
+
+//     aniversario: function(){
+//         this.idade += 1;
+//     },
+
+//     saudacao: function(){
+//         return 'Salve, ' + this.name;
+//     }
+// };
+
+// pessoa.DizerNome();
+
+// console.log(pessoa.idade);
+
+// pessoa.aniversario();
+
+// console.log(pessoa.idade);
+
+// console.log(pessoa.saudacao());
