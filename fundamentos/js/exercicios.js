@@ -1,6 +1,6 @@
 // ================= EXERCICIOS JAVACSRIPT ==============
 
-// [nivel iniciante]
+// [nivel iniciante - NEWBIE]
 
 // 01 - criar uma função que pegue os valores de uma array numerico, filtrando valores positivos
 // e depois somando-os
@@ -18,14 +18,30 @@ function SomaPositivosArray(arry){
 
 SomaPositivosArray([,5 ,-4 ,10, -2, -5]);
 
+//outra resposta
+
+function somaPositives(arry){
+    let response = 0;
+
+    for (n of arry) {
+        if( n > 0){
+            response += n
+        }
+    };
+
+    return response;
+};
+
 
 // 02 - criar uma função que verifica se um valor é par ou impar
 
 function ParOuImpar(num){
     if(num % 2 == 0){
-        console.log("exercicio 2: o numero " + num + " é PAR ");
+        // console.log("exercicio 2: o numero " + num + " é PAR ");
+        return "Par";
     } else {
-        console.log("exercicio 2: o numero " + num + " é IMPAR ");
+        // console.log("exercicio 2: o numero " + num + " é IMPAR ");
+        return "Impar";
     };
 };
 
@@ -85,3 +101,47 @@ function FindJohn(arry){
 };
 
 FindJohn(array2);
+
+
+// 08 -  função que pegue os valores de vitorias, empates e derrotas  e returnasse a somatoria de pontos
+// win = 3 pontos
+// draw = 1 ponto
+// loss = 0 pontos
+
+function SumPoints(w, d, l){
+    let win = w * 3;
+    let draw = d * 1;
+    let loss = l * 0;
+
+    let response = win + draw + loss;
+    return response;
+};
+
+SumPoints(3, 2, 1);
+
+
+// 09 -  função que retorna qualquer valor com snal negativo
+
+function TurnToNegative(num){
+
+    if(num < 0){
+        return num;
+    } else {
+        return -num;
+    };
+    
+};
+
+
+// 010 - criar uma função que modifique a area de um triangulo
+
+function TrinagleArea(b, h){
+    let area = (b*h)/2;
+    return area;
+
+};
+
+// =============================================================================
+
+
+// [nivel ROOKIE];
