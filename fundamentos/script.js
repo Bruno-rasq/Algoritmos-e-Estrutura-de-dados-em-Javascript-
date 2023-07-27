@@ -753,3 +753,27 @@ window.onload = function(){
 };
 
 console.log("carregou o JS");
+
+//[Onclick]
+// o click é ativado quando o usuário clica em um elemento em que o evento foi atrelado
+
+let btn = document.querySelector("#btn");
+
+btn.addEventListener("click", () => {
+    // console.log("click");
+    console.log("click");
+
+    btn.style.color = "red";
+});
+
+var title = document.querySelector("#title");
+
+title.addEventListener("click", () => {
+    document.body.style.background = "lightgray";
+})
+
+//[dblclick] //não funciona mais
+// evento de duplo click 
+btn.addEventListener("dblclick", () => {
+    console.log("click duplo");
+});
