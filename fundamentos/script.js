@@ -696,3 +696,40 @@ console.warn("console.warn");
 //     console.log("testando o setInterval");
 
 // }, 6000);
+
+
+// // ====================CLEARTIMEOUT E CLEARINTERVAL ================
+
+// //podemos por um fim em seTimeOut e setInterval por meio destes dois métodos.
+// // então quando determinada condição for correspondida os timers não serão mais executados.
+
+// //[clearTimeOut]
+
+// let x = 0;
+
+// let mytimer = setTimeout(function(){
+//     console.log("o valor de x é 0");
+// }, 1000);
+
+// x = 5;
+
+// if(x > 0){
+//     clearTimeout(mytimer);
+//     console.log("parou a excução")
+// };
+
+
+// //[ClearInterval]
+
+// var myInterval = setInterval(() => {
+
+//     console.log("meu Intervalo");
+
+// }, 500);
+
+// setTimeout(() => {
+
+//     console.log("parando o intervalo");
+//     clearInterval(myInterval);
+
+// }, 1500);
