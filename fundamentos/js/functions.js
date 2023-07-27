@@ -61,3 +61,33 @@ function multiplicacao(a, b, cb){
 
 soma(2, 2, exibir);
 multiplicacao(5, 2, exibir);
+
+
+// ============== SETIMEOUT E SETINTERVAL ============
+
+//podemos com estas funçãoes cirar ações no software que executam depois de um tempo ou de tempos em tempos.
+//um dos argumentos destas funções são as callback functions
+
+// [setimeout]
+// executa uma função depois de determinado tempo.
+
+console.log("antes do setimeou");
+
+setTimeout(function(){
+    //funções que são passadas de alrgumento para outras
+    //são sonsideradas callback
+    console.log("testando o setimeout");
+
+}, 6000); // esse valor indica o tempo 1ms = 1000ms = 1s
+
+console.log("depois do setimeou");
+
+
+// [setInterval]
+// executa uma função de tempos em tempos infinitamente
+
+setInterval(function(){
+    
+    console.log("testando o setInterval");
+
+}, 6000);
