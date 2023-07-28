@@ -781,16 +781,41 @@ console.warn("console.warn");
 
 //[mouseover] e [mouseout]
 
-var title = document.querySelector("#title");
-console.log(title);
+// var title = document.querySelector("#title");
+// console.log(title);
 
-title.addEventListener("mouseover", () => {
-    title.style.backgroundColor = "yellow";
-});
+// title.addEventListener("mouseover", () => {
+//     title.style.backgroundColor = "yellow";
+// });
 
  //obs: por algum motivo o evento mouseover está se comportando como click
  //quando o inspecionar está aberto
 
- title.addEventListener("mouseout", () => {
-    title.style.backgroundColor = "white";
- });
+//  title.addEventListener("mouseout", () => {
+//     title.style.backgroundColor = "white";
+//  });
+
+
+// // [keydown]
+// // o evento keydown é ativado quando uma tecla é pressionada;
+// // o keydown é atrelado quando a tecla é precionada
+// // keyup é o evento atrelado quando a tecla é solta
+
+// //mapeamento de tecla
+
+// document.addEventListener("keydown", (event) => {
+//     // console.log(event.key);
+
+//     if(event.key === "Enter"){
+//         console.log(event.key);
+//     }
+
+// });
+
+// document.addEventListener("keyup", (e) => {
+
+//     if(e.key === "Enter"){
+//         console.log("soltei o " + e.key)
+//     };
+
+// });

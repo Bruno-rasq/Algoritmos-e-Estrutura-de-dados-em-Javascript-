@@ -58,3 +58,28 @@ title.addEventListener("mouseover", () => {
  title.addEventListener("mouseout", () => {
     title.style.backgroundColor = "white";
  });
+
+
+ // [keydown]
+// o evento keydown é ativado quando uma tecla é pressionada;
+// o keydown é atrelado quando a tecla é precionada
+// keyup é o evento atrelado quando a tecla é solta
+
+//mapeamento de tecla
+
+document.addEventListener("keydown", (event) => {
+    // console.log(event.key);
+
+    if(event.key === "Enter"){
+        console.log(event.key);
+    }
+
+});
+
+document.addEventListener("keyup", (e) => {
+
+    if(e.key === "Enter"){
+        console.log("soltei o " + e.key)
+    };
+
+});
