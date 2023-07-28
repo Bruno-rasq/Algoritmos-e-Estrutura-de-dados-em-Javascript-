@@ -41,3 +41,20 @@ title.addEventListener("click", () => {
 btn.addEventListener("dblclick", () => {
     console.log("click duplo");
 });
+
+
+//[mouseover] e [mouseout]
+
+var title = document.querySelector("#title");
+console.log(title);
+
+title.addEventListener("mouseover", () => {
+    title.style.backgroundColor = "yellow";
+});
+
+ //obs: por algum motivo o evento mouseover está se comportando como click
+ //quando o inspecionar está aberto
+
+ title.addEventListener("mouseout", () => {
+    title.style.backgroundColor = "white";
+ });

@@ -745,35 +745,52 @@ console.warn("console.warn");
 //[OnLoad]
 // o onload é ativado ao carregar a página
 
-window.onload = function(){
-    console.log("carregou o DOM");
-    var title = document.querySelector("#title");
-    console.log(title);
+// window.onload = function(){
+//     console.log("carregou o DOM");
+//     var title = document.querySelector("#title");
+//     console.log(title);
     
-};
+// };
 
-console.log("carregou o JS");
+// console.log("carregou o JS");
 
 //[Onclick]
 // o click é ativado quando o usuário clica em um elemento em que o evento foi atrelado
 
-let btn = document.querySelector("#btn");
+// let btn = document.querySelector("#btn");
 
-btn.addEventListener("click", () => {
-    // console.log("click");
-    console.log("click");
+// btn.addEventListener("click", () => {
+//     // console.log("click");
+//     console.log("click");
 
-    btn.style.color = "red";
-});
+//     btn.style.color = "red";
+// });
+
+// var title = document.querySelector("#title");
+
+// title.addEventListener("click", () => {
+//     document.body.style.background = "lightgray";
+// })
+
+// //[dblclick] //não funciona mais
+// // evento de duplo click 
+// btn.addEventListener("dblclick", () => {
+//     console.log("click duplo");
+// });
+
+
+//[mouseover] e [mouseout]
 
 var title = document.querySelector("#title");
+console.log(title);
 
-title.addEventListener("click", () => {
-    document.body.style.background = "lightgray";
-})
-
-//[dblclick] //não funciona mais
-// evento de duplo click 
-btn.addEventListener("dblclick", () => {
-    console.log("click duplo");
+title.addEventListener("mouseover", () => {
+    title.style.backgroundColor = "yellow";
 });
+
+ //obs: por algum motivo o evento mouseover está se comportando como click
+ //quando o inspecionar está aberto
+
+ title.addEventListener("mouseout", () => {
+    title.style.backgroundColor = "white";
+ });
