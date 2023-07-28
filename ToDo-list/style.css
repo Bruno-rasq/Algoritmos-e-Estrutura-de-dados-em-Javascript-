@@ -1,3 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: lightgray;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #e65763, #34073d);
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#tasks-container{
+    width: 500px;
+    margin: 0 auto;
+}
+
+/* tasks - form */
+
+#tasks-header{
+    margin-block: 40px;
+}
+
+#tasks-header h2{
+    margin-bottom: 15px;
+}
+
+#add-tasks-form{
+    position: relative;
+    display: flex;
+}
+
+#add-tasks-form input{
+    border: 1px solid #34073d;
+    padding: 15px;
+    background: white;
+    color: #34073d;
+    width: 100%;
+    font-size: 18px;
+    outline: none;
+}
+
+#add-tasks-form input::placeholder{
+    color: #34073d;
+    opacity: .5;
+}
+
+#add-btn{
+    /* position: absolute; */
+    background-color: white;
+    border: 1px solid #34073d;
+    cursor: pointer;
+    transition: .5s;
+    width: 60px;
+    height: 53px;
+
+    /* top: 0;
+    right: 0; */
+}
+
+#add-btn:hover{
+    background-color: #34073d;
+    color: white;
+}
+
+/* tasks-container */
+
+#task-list{
+    list-style: none;
+}
+
+#task-list li{
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    border-bottom: 3px solid #34073d;
+    background-color: white;
+    color: #34073d;
+    margin-top: 10px;
+    padding-left: 15px;
+    transition: .5s;
+    
+}
+
+#done-btn,
+#remove-btn{
+    position: absolute;
+    top: 0;
+
+    height: 100%;
+    width:  40px;
+    /* padding:10px 5px 5px 5px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .5s;
+    cursor: pointer;
+    
+
+}
+
+#done-btn{
+    right: 40px;
+}
+
+#done-btn:hover{
+    color: white;
+    background-color: #09e010;
+}
+
+#remove-btn{
+    right: 0;
+}
+
+#remove-btn:hover{
+    color: white;
+    background-color: #eb0927;
+}
+
+/* utilitários */
+
+.hide{
+    display: none;
+}
+
+#task-list li.done{
+    background-color: #34073d;
+    color: white;
+    text-decoration: line-through;
 }
