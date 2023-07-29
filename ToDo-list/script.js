@@ -24,8 +24,18 @@ function addTask(){
 
         //limpando o texto do input
         document.querySelector("#task-title").value = "";
+
+        //adicionando evento de remover
+        const removerBtn = NewTask.querySelector("#remove-btn").addEventListener("click", function() {
+            removeTask(this);
+        });
     }
 
+};
+
+//função de remover tarefa
+function removeTask(task){
+   task.parentNode.remove(true);
 }
 
 
