@@ -145,3 +145,13 @@ function TrinagleArea(b, h){
 
 
 // [nivel ROOKIE];
+
+
+// 01 - encontre o menor valor de uma array
+
+function FindTheSmallest(arr){
+    let min = Math.min(...arr);
+    return min;
+};
+
+FindTheSmallest([2, 6, 4, 8, 3, 21, 14]);
