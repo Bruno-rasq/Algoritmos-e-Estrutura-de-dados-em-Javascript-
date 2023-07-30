@@ -29,6 +29,11 @@ function addTask(){
         const removerBtn = NewTask.querySelector("#remove-btn").addEventListener("click", function() {
             removeTask(this);
         });
+
+        //adicionando evento de concluir tarefa
+        const doneBtn = NewTask.querySelector("#done-btn").addEventListener("click", function() {
+            doneTask(this);
+        });
     }
 
 };
@@ -36,6 +41,13 @@ function addTask(){
 //função de remover tarefa
 function removeTask(task){
    task.parentNode.remove(true);
+}
+
+//função de concluir tarefa
+function doneTask(task){
+    const taskComplete = task.parentNode;
+
+    taskComplete.classList.toggle("done");
 }
 
 
