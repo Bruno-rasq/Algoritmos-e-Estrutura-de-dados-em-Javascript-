@@ -44,3 +44,54 @@ console.log(obj);
 const JSONerrado = '{"nome":"burro", "idade": "22"}';
 const obj2 = JSON.stringify(JSONerrado);
 console.log(obj2);
+
+
+
+// =====================  JSON ============================
+
+// json = javascript object notation
+// formato de representação de dades
+// utiliza formato chave valor
+// leve para ser enviado em requisição
+// muito utilizado em API e tambem arquivos de configuração
+
+// json é sempre com aspas duplas ""
+
+const objs = [
+    {
+        nome: "Bruno",
+        idade: 22,
+        esta_estudando: true,
+        hobbies: ["programar", "treinar", "filmes", "musicas"],
+    
+        detalhes_profissao: {
+            profissao: "web-desenvolvedor",
+            tempo_na_area: "8 meses"
+        }
+    },
+    {
+        nome: "heleno",
+        idade: 22,
+        esta_estudando: false,
+        hobbies: ["jogar", "treinar"],
+    
+        detalhes_profissao: {
+            profissao: "design grafico",
+            tempo_na_area: "2 anos"
+        }
+    }
+];
+
+console.log(objs);
+
+// obj para JSON 
+const jsonDATA = JSON.stringify(objs);
+console.log(jsonDATA);
+
+// json para obj
+const newObjs = JSON.parse(jsonDATA);
+console.log(newObjs);
+
+newObjs.forEach((user) => {
+    console.log(user.nome);
+});

@@ -1,0 +1,13 @@
+[
+    {
+        "nome": "Bruno",
+        "idade": 22,
+        "esta_estudando": true,
+        "hobbies": ["programar", "treinar", "filmes", "musicas"],
+    
+        "detalhes-profissao": {
+            "profissao": "web-desenvolvedor",
+            "tempo-na-area": "8 meses"
+        }
+    }
+]
