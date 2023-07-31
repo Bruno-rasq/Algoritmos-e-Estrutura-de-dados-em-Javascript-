@@ -227,7 +227,7 @@ console.warn("console.warn");
 
 //     // console.log(listaDois[index]);
 //     console.log(`imprimindo: ${listaDois[index]}`); // template literals
-    
+
 // };
 
 
@@ -532,7 +532,7 @@ console.warn("console.warn");
 // let x = 0;
 
 // while(x <= 100){
-    
+
 //     x += 10;
 
 //     if(x === 60){
@@ -749,7 +749,7 @@ console.warn("console.warn");
 //     console.log("carregou o DOM");
 //     var title = document.querySelector("#title");
 //     console.log(title);
-    
+
 // };
 
 // console.log("carregou o JS");
@@ -788,8 +788,8 @@ console.warn("console.warn");
 //     title.style.backgroundColor = "yellow";
 // });
 
- //obs: por algum motivo o evento mouseover está se comportando como click
- //quando o inspecionar está aberto
+//obs: por algum motivo o evento mouseover está se comportando como click
+//quando o inspecionar está aberto
 
 //  title.addEventListener("mouseout", () => {
 //     title.style.backgroundColor = "white";
@@ -838,7 +838,7 @@ console.warn("console.warn");
 //         idade: 22,
 //         esta_estudando: true,
 //         hobbies: ["programar", "treinar", "filmes", "musicas"],
-    
+
 //         detalhes_profissao: {
 //             profissao: "web-desenvolvedor",
 //             tempo_na_area: "8 meses"
@@ -849,7 +849,7 @@ console.warn("console.warn");
 //         idade: 22,
 //         esta_estudando: false,
 //         hobbies: ["jogar", "treinar"],
-    
+
 //         detalhes_profissao: {
 //             profissao: "design grafico",
 //             tempo_na_area: "2 anos"
@@ -973,17 +973,75 @@ console.warn("console.warn");
 //          resolve("p4 ok");
 //     }, 2000);
 //  });
- 
+
 //  const p5 = new Promise((resolve, reject) => {
 //      resolve("p5 ok");
 //  });
- 
+
 //  const p6 = new Promise((resolve, reject) => {
 //      resolve("p6 ok");
 //  });
- 
+
 //  const resolveRace = Promise.race([p4, p5, p6]).then((data) => {
 //      console.log(data);
 //  });
- 
+
 //  console.log("depois do race");
+
+
+
+// // ==================== ASYNC AWAIT =====================
+
+// //funcionam como as promises porem mais simples
+
+// //precisamos declarar a função com a palavra async;
+// // e quando for necessário aguardar uma informação utilizamos o await
+
+// // tentar usar awiat sem o async gera um erro
+
+
+
+
+// //sintaxe
+// function PrimeiraFuncao() {
+
+//     return new Promise((resolve) => {
+
+//         setTimeout(() => {
+//             console.log("espere por isso");
+//             resolve()
+//         }, 3000)
+
+//     })
+// };
+
+// async function segundaFuncao(){
+
+//     console.log("iniciou");
+
+//     await PrimeiraFuncao();
+
+//     console.log("terminou");
+// };
+
+// segundaFuncao();
+
+
+
+// // ======= prático ==========
+// function getUser(id) {
+//     return fetch(`https://reqres.in/api/user?id=${id}`).then(data => data.json()).catch(erro => console.log(erro));
+// };
+
+// async function ShowUsername(id) {
+
+//     try {
+//         const user = await getUser(id);
+//         console.log(`o nome do usuário é: ${user.data.first_name}`);
+//     } catch {
+//         console.log(`erro: ${erro}`)
+//     }
+    
+// };
+
+// ShowUsername(3);
