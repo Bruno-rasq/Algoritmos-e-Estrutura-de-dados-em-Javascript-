@@ -870,3 +870,73 @@ console.warn("console.warn");
 // newObjs.forEach((user) => {
 //     console.log(user.nome);
 // });
+
+
+// ========================= PROMISES ===========================
+
+// são como promessas da vida real, ela está esperando algum retorno
+
+// para criar uma promessa instanciamos a classe promise
+// que leva dois argumentos resolve(solução) e reject(erro)
+// para encadear mais processos utilizamos o método THEN;
+
+//alguns recursos do JS (fetch API) e bibliotecas retornam promises
+
+
+//criação de uma promessa
+
+const myPromise = new Promise((resolve, reject) => {
+
+    const nome = "bruno";
+
+    if(nome == "bruno"){
+        resolve("Usuário encontrado");
+    } else {
+        reject("Usuário não encontrado");
+    };
+
+});
+
+myPromise.then( (data) => {
+    console.log(data)
+});
+
+
+// encadeamento de then's
+const myPromise2 = new Promise((resolve, reject) => {
+
+    const nome = "bruno";
+
+    if(nome == "bruno"){
+        resolve("Usuário encontrado");
+    } else {
+        reject("Usuário não encontrado");
+    };
+
+});
+
+myPromise2.then( (data) => {
+    return data.toUpperCase();
+}).then( (dataModifity) => {
+    console.log(dataModifity);
+});
+
+
+// retorno do catch
+const myPromise3 = new Promise((resolve, reject) => {
+
+    const nome = "heleno";
+
+    if(nome == "bruno"){
+        resolve("Usuário encontrado");
+    } else {
+        reject("Usuário não encontrado");
+    };
+
+});
+
+myPromise3.then((data) => {
+    console.log(data);
+}).catch((err) => {
+    console.log("aconteceu um erro:" + err);
+});
