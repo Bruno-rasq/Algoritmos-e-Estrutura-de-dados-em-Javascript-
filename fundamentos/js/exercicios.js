@@ -270,3 +270,17 @@ function CountVogal(str){
 CountVogal("string teste");
 CountVogal("aeiou");
 CountVogal("AEIOU");
+
+
+// 09 - função que receba um array e retorne um novo array com o maior e o menor valor do array anterior.
+
+function returnTwo(arr){
+
+    let smallest = Math.min(...arr);
+    let biggest = Math.max(...arr);
+
+    let response = [smallest, biggest];
+    return console.log(response);
+};
+
+returnTwo([10, 45, -42]);
