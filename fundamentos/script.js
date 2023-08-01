@@ -6,8 +6,21 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-// let email = "bruno@gmail.com.br";
-// let RegEx_email = /([a-z0-9\.\-]{2,})@([a-z]{2,})(\.[a-z]{2,})(\.[a-z]{2,})?/gi;
+function CountVogal(str){
 
-// let telefone = "(45) 98888-8888";
-// let regEx_telefone = /\([0-9]{2}\)\s([9]{1})?([0-9]{3,4})\-([0-9]{3,4})/g;
+    let strg = str.toLowerCase();
+    let arr = strg.split('');
+
+    let response = arr.filter((char) => {
+        if( char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u'){
+            return char
+        };
+    });
+
+    return console.log(response.length);
+
+};
+
+CountVogal("string teste");
+CountVogal("aeiou");
+CountVogal("AEIOU");

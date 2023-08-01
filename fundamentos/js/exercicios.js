@@ -82,6 +82,7 @@ ageToDays(4);
 // 06 - função que pegue uma string e remova todos os espaços em branco
 
 function spaceRemove(strg){
+    //  regEx /\s+/ serve para selecionar os espaços
     let response = strg.split(/\s+/).join('');  // utiliza expressões regulares
     // let response = strg.replace(/\s+/g, '');
     return console.log(response)
@@ -120,7 +121,7 @@ function SumPoints(w, d, l){
 SumPoints(3, 2, 1);
 
 
-// 09 -  função que retorna qualquer valor com snal negativo
+// 09 -  função que retorna qualquer valor com sinal negativo
 
 function TurnToNegative(num){
 
@@ -236,3 +237,36 @@ function PLanguage(strg){
 };
 
 PLanguage("Simples é diferente de fácil");
+
+
+// 07 - função que receba uma string e retorne a string sem o caracter inicial e final
+
+function RemoveChars(str){
+    let response = str.slice(1, str.length - 1);
+    return console.log(response);
+};
+
+RemoveChars("javascript");
+RemoveChars("turtles");
+
+
+// 08 - função que recebe uma string, e retorna a quantidade de vogais presentes
+
+function CountVogal(str){
+
+    let strg = str.toLowerCase();
+    let arr = strg.split('');
+
+    let response = arr.filter((char) => {
+        if( char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u'){
+            return char
+        };
+    });
+
+    return console.log(response.length);
+
+};
+
+CountVogal("string teste");
+CountVogal("aeiou");
+CountVogal("AEIOU");
