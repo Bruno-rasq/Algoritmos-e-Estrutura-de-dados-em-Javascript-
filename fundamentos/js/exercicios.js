@@ -226,8 +226,10 @@ getAverage([1, 2, 3, 4, 5]);
 // 06 - função que recebe uma string e transcreve para a lingua do "P"
 
 function PLanguage(strg){
+    //fatiando a string e transformando em array
     let split = strg.split(' ');
 
+    //gerando um novo array com a letra P no inicio de cada palavra
     let response = split.map((s) => {
         let p = "P";
         return p + s;
@@ -242,6 +244,8 @@ PLanguage("Simples é diferente de fácil");
 // 07 - função que receba uma string e retorne a string sem o caracter inicial e final
 
 function RemoveChars(str){
+
+    //recortando o primeiro e ultimo caracter
     let response = str.slice(1, str.length - 1);
     return console.log(response);
 };
@@ -254,9 +258,12 @@ RemoveChars("turtles");
 
 function CountVogal(str){
 
+    // passando todas as letras para minusculo por precausão
     let strg = str.toLowerCase();
+    //fatiando a string e transformando-a em array
     let arr = strg.split('');
 
+    //filtrando todas as vogais
     let response = arr.filter((char) => {
         if( char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u'){
             return char
@@ -276,11 +283,34 @@ CountVogal("AEIOU");
 
 function returnTwo(arr){
 
+    // pegando o menor e maior valor do array
     let smallest = Math.min(...arr);
     let biggest = Math.max(...arr);
 
+    //gerando um novo array apenas com o menor e maior valor
     let response = [smallest, biggest];
     return console.log(response);
 };
 
 returnTwo([10, 45, -42]);
+
+
+// 010 - função que recebe uma string e devolva o tamanho da menor palavra da string
+
+function shortestWord(str){
+
+    // fatiar a string em palavras, gerando um array
+    let arr = str.split(' ');
+
+    // usando o map para gerar um novo array com os tamanhos das palavras
+    let words = arr.map((word) => {
+        return word.length;
+    });
+
+    // usando uma variavel para pegar o menor tamanho do novo array
+    let response = Math.min(...words);
+    return console.log(response);
+
+};
+
+shortestWord("string teste para verificar o tamanho das palavras em umm array");
