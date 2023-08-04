@@ -365,3 +365,24 @@ function isprime(n){
 isprime(10);
 isprime(8);
 isprime(27);
+
+// 03 - transcreva snakeCase para pascal
+// snakecase => "hello_world"
+// pascal => "HelloWorld";
+
+function snakeToPascal(word){
+
+    //subistituir todos os underline por espaço vazio
+    let arr = word.replaceAll("_", " ");
+
+    // repartir a string em array de strings
+    let split = arr.split(' ');
+
+    let resp = split.map((word) => {
+        return word.substring(0,1).toUpperCase().concat(word, substring(1));
+    });
+
+    return console.log(resp.join(''));
+};
+
+snakeToPascal("hello_world");

@@ -5,22 +5,19 @@ console.log("Console.log");
 console.error("console.error");
 console.warn("console.warn");
 
-function isprime(n){
+function snakeToPascal(word){
 
-    // um array que recebe os valores em que o resto da divisão por n dá igual a 0
-    let arr = [];
+    //subistituir todos os underline por espaço vazio
+    let arr = word.replaceAll("_", " ");
 
-    for ( let i=0; i <= n; i++){
-        if(n%i == 0){
-            arr.push(i);
-        }
-    };
+    // repartir a string em array de strings
+    let split = arr.split(' ');
 
-    // se houver mais de 2 divisores com resto inteiro, então não é primo
-    let resp = arr.length > 2 ? false : true;
-    return console.log(resp);
+    let resp = split.map((word) => {
+        return word.substring(0,1).toUpperCase().concat(word.substring(1));
+    });
+
+    return console.log(resp.join(''));
 };
 
-isprime(10);
-isprime(7);
-isprime(27);
+snakeToPascal("hello_world");
