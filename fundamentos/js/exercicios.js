@@ -142,6 +142,8 @@ function TrinagleArea(b, h){
 
 };
 
+
+
 // =============================================================================
 
 
@@ -314,3 +316,28 @@ function shortestWord(str){
 };
 
 shortestWord("string teste para verificar o tamanho das palavras em umm array");
+
+
+
+// ===================================================================================
+
+
+// - [NIVEL STARTER]
+
+
+
+// ===================================================================================
+
+
+// - [NIVEL CODER]
+
+
+// 01 - função que receba um numero e retorne sua transcrição em binário
+
+function translateBinary(n){
+
+    let resp = n.toString(2);
+    return console.log(resp);
+};
+
+translateBinary(42);

@@ -19,3 +19,14 @@ function test(str){
 };
 
 test("string teste para verificar o tamanho das palavras em umm array");
+
+
+function translateBinary(n){
+
+    let resp = n.toString(2);
+    return console.log(resp);
+};
+
+translateBinary(42);
+translateBinary(2);
+translateBinary(23);
