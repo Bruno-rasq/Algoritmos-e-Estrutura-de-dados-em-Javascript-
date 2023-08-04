@@ -56,4 +56,32 @@ console.log(rest);
 // ============================
 
 
-// functions
+// [functions]
+
+function testObject({ maca }){
+    console.log(maca);
+};
+
+let frutas = {
+    maca: "maça",
+    banana: "banana",
+    laranja: "laranja"
+};
+
+testObject(frutas);
+
+
+function testArray([banana, ...rest]){
+    console.log(rest);
+};
+
+let fruits2 = ["banana", "maça", "laranja"];
+
+testArray(fruits2);
+
+
+function test3([first, ...rest]){
+    console.log((rest.join('')) + first);
+};
+
+test3("banana");
