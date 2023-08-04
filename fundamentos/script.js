@@ -5,28 +5,22 @@ console.log("Console.log");
 console.error("console.error");
 console.warn("console.warn");
 
-function test(str){
+function isprime(n){
 
-    let arr = str.split(' ');
+    // um array que recebe os valores em que o resto da divisão por n dá igual a 0
+    let arr = [];
 
-    let words = arr.map((word) => {
-        return word.length;
-    });
+    for ( let i=0; i <= n; i++){
+        if(n%i == 0){
+            arr.push(i);
+        }
+    };
 
-    let response = Math.min(...words);
-    return console.log(response);
-
-};
-
-test("string teste para verificar o tamanho das palavras em umm array");
-
-
-function translateBinary(n){
-
-    let resp = n.toString(2);
+    // se houver mais de 2 divisores com resto inteiro, então não é primo
+    let resp = arr.length > 2 ? false : true;
     return console.log(resp);
 };
 
-translateBinary(42);
-translateBinary(2);
-translateBinary(23);
+isprime(10);
+isprime(7);
+isprime(27);
