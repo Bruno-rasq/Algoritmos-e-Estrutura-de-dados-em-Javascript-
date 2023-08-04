@@ -386,3 +386,22 @@ function snakeToPascal(word){
 };
 
 snakeToPascal("hello_world");
+
+
+// 04 - funcao que recebe um numero e retorne a quantidade de caracteres 0-9 
+
+function countDigits(n){
+
+    let arr = [];
+    arr.push(n);
+
+    let req = arr.toString().split('');
+    let resp = req.length;
+
+    return console.log(resp)
+};
+
+countDigits(932121);
+countDigits(93);
+
+

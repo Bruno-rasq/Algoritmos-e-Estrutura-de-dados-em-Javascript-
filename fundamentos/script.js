@@ -5,19 +5,16 @@ console.log("Console.log");
 console.error("console.error");
 console.warn("console.warn");
 
-function snakeToPascal(word){
+function countDigits(n){
 
-    //subistituir todos os underline por espaço vazio
-    let arr = word.replaceAll("_", " ");
+    let arr = [];
+    arr.push(n);
 
-    // repartir a string em array de strings
-    let split = arr.split(' ');
+    let req = arr.toString().split('');
+    let resp = req.length;
 
-    let resp = split.map((word) => {
-        return word.substring(0,1).toUpperCase().concat(word.substring(1));
-    });
-
-    return console.log(resp.join(''));
+    return console.log(resp)
 };
 
-snakeToPascal("hello_world");
+countDigits(932121);
+countDigits(93);
