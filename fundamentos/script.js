@@ -5,24 +5,19 @@ console.log("Console.log");
 console.error("console.error");
 console.warn("console.warn");
 
-let age;
+const fruits = ["banana", "pera", "uva"];
 
-const pessoa = {
-    nome: "bruno",
-    idade: 22
-};
+const bananaa = fruits[0];
+console.log(bananaa);
 
-// uma forma de pegar o valor
-const name = pessoa.nome;
-console.log(name);
+const [ banana, pera ] = fruits;
+console.log(banana, pera);
 
-// forma com destructuring
-const { nome } = pessoa;
-console.log(nome);
+const [ b, p ] = fruits;
+console.log(b, p);
 
-// renomeando
-// const { idade: age } = pessoa;
-// console.log(age);
+const [ , b2, p2 ] = fruits;
+console.log(b2, p2);
 
-({ idade: age } = pessoa);
-console.log(age);
+const [bana, ...rest] = fruits;
+console.log(rest);
