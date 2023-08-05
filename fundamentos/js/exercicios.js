@@ -504,6 +504,13 @@ function allEquals(list){
 }
 
 
+
+// 010 -função que recebe dois parametros, uma lista de numeros e um numero
+//e devreá retornar a soma dos itens da list de acordo com o numero
+// exm: ([1,2,3] 2) --> 3
+// exm: ([2,2,2] 3) --> 6
+
+
 // ===================================================================================
 
 
@@ -581,5 +588,24 @@ function countDigits(n){
 
 countDigits(932121);
 countDigits(93);
+
+
+// 05 - função que recebe um array e verifica se pelo menos um dos itens é diferente, entao retorna-o
+// exm: ([2, 2, 2, 2, 2, 4, 2]) ---> 4
+
+// 06 - funçaõ que recebe um array de numeros e retorna o segundo maior valor que aparecer no array
+// exm: ([2, 45, 2, 3, 12, 33]) --> 33
+
+// 07 - fução que verifica se uma palavra é palindrono ou não, retornando true ou false
+// exm: "eye" --> true
+// exm : "codict" --> false
+
+// 08 - função que recebe um numero e formata-o para numero de telefone
+// exm: ("0987654321") --> (098) 765 4321
+
+// 09 - função que retorna um array espelhado
+// exm: ([1,2]) --> [1,2,2,1]
+
+// 010 - função que converte celsius para fahrenheit
 
 
