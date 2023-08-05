@@ -6,13 +6,40 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-// não resolvido
-function AllEquals(arr){
+function swapVowels(word){
+    
+    let lower = word.toLowerCase();
+    let arr = lower.split('');
 
-    let response = arr.every((n) => n === n);
+    let response = arr.map((char) => {
+        switch (char){
+            case 'a':
+                char = 1;
+                break;
+            
+            case 'e':
+                char = 2;
+                break;
 
-    return console.log(response);
-};
+            case 'i':
+                char = 3;
+                break;
 
-AllEquals([1, 1, 1, 1, 1, 1]);
-AllEquals([1, 3, 1, 2, 1, 1]);
+            case 'o':
+                char = 4;
+                break;
+                
+            case 'u':
+                char = 5;
+                break;
+
+            default:
+        };
+
+        return char;
+    });
+
+    return console.log(response.join(''));
+}
+
+swapVowels("hello world!");

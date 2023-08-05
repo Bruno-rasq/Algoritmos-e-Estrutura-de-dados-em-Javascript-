@@ -369,6 +369,47 @@ HideEmail("meumanoheleno@gmail.com.br");
 //.splice() remove, adiciona ou substitui elemento em posição especifica de array
 
 
+// 02 - função que troque as vogais por numeros de 1 a 5
+// a=1, e=2, i=3, o=4, u=5
+
+function swapVowels(word){
+    
+    let lower = word.toLowerCase();
+    let arr = lower.split('');
+
+    let response = arr.map((char) => {
+        switch (char){
+            case 'a':
+                char = 1;
+                break;
+            
+            case 'e':
+                char = 2;
+                break;
+
+            case 'i':
+                char = 3;
+                break;
+
+            case 'o':
+                char = 4;
+                break;
+                
+            case 'u':
+                char = 5;
+                break;
+
+            default:
+        };
+
+        return char;
+    });
+
+    return console.log(response.join(''));
+}
+
+swapVowels("hello world!");
+
 
 // ===================================================================================
 
