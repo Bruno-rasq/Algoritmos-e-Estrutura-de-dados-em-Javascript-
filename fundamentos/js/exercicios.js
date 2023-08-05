@@ -477,6 +477,25 @@ function firstChar(list){
 
 firstChar(["eye", "mouse", "key"]);
 
+// 08 - função que recebe um valor numerico e retorna um array com os divisores 
+
+function divisors(n){
+
+    let cont = n;
+    let resp = [];
+
+    for(let i =0; i <= cont; i++){
+        if(cont%i == 0){
+            resp.push(i);
+        }
+    };
+
+    return console.log(resp)
+}
+
+divisors(8);
+divisors(10);
+
 
 // ===================================================================================
 

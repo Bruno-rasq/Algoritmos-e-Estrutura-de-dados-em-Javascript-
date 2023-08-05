@@ -6,12 +6,19 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-function firstChar(list){
-    let resp = list.map((word) => {
-        return word.slice(0,1);
-    });
+function divisors(n){
 
-    return console.log(resp)
-};
+    let cont = n;
+    let resp = [];
 
-firstChar(["eye", "mouse", "key"]);
+    for(let i =0; i <= cont; i++){
+        if(cont%i == 0){
+            resp.push(i);
+        }
+    };
+
+    return console.log(resp);
+}
+
+divisors(8);
+divisors(10);
