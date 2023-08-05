@@ -6,12 +6,13 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-function removeVowels(str){
-    let lower = str.toLowerCase();
-    let resp = lower.replace(/(a|e|i|o|u)/gi, '');
+function removedups(list){
+    let resp = list.filter((valor, indice, self) => {
+        return self.indexOf(valor) === indice;
+    });
 
     return console.log(resp);
 }
 
-removeVowels("vowels");
-removeVowels("development");
+removedups([11, 23, 4, 4, 3, 3, 5]);
+removedups([23, 23, 4, 4, 5]);
