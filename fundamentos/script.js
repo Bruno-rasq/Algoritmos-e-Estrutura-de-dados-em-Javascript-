@@ -6,14 +6,12 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-function squareItAll(n){
-    let split = (''+n).split('');
-    let response = split.map((n) => {
-        return n ** 2;
-    });
+function removeVowels(str){
+    let lower = str.toLowerCase();
+    let resp = lower.replace(/(a|e|i|o|u)/gi, '');
 
-    return console.log(response.join(''));
+    return console.log(resp);
 }
 
-squareItAll(67);
-squareItAll(123);
+removeVowels("vowels");
+removeVowels("development");

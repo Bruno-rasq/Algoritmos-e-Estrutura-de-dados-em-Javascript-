@@ -439,6 +439,18 @@ function squareItAll(n){
 squareItAll(67);
 squareItAll(123);
 
+// 05 - função que remova todas as vogais de ums string
+
+function removeVowels(str){
+    let lower = str.toLowerCase();
+    let resp = lower.replace(/(a|e|i|o|u)/gi, '');
+
+    return console.log(resp);
+}
+
+removeVowels("vowels");
+removeVowels("development");
+
 
 // ===================================================================================
 
