@@ -6,15 +6,14 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-function SortList(list){
-    let response = list.sort((a,b) => {
-        if(a.length > b.length) return 1;
-        if(a.length < b.length) return -1;
-
-        return 0;
+function squareItAll(n){
+    let split = (''+n).split('');
+    let response = split.map((n) => {
+        return n ** 2;
     });
 
-    return console.log(response);
+    return console.log(response.join(''));
 }
 
-SortList(["eye", "mouse", "a"]);
+squareItAll(67);
+squareItAll(123);

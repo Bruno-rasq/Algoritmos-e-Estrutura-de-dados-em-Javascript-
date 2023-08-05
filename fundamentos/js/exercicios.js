@@ -425,6 +425,20 @@ function SortList(list){
 
 SortList(["eye", "mouse", "a"]);
 
+// 04 - função que recebe um numero e devolve uma string formada pelo quadrado de cada digito
+
+function squareItAll(n){
+    let split = (''+n).split('');
+    let response = split.map((n) => {
+        return n ** 2;
+    });
+
+    return console.log(response.join(''));
+}
+
+squareItAll(67);
+squareItAll(123);
+
 
 // ===================================================================================
 
