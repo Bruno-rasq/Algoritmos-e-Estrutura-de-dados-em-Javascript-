@@ -497,6 +497,13 @@ divisors(8);
 divisors(10);
 
 
+// 09 - função que verifica se todos os valores de um array são iguais [NÃO PASSOU AINDA]
+
+function allEquals(list){
+    return response = list.every((n) => n == n ? true : false);
+}
+
+
 // ===================================================================================
 
 
