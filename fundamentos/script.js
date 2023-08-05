@@ -6,13 +6,12 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-function removedups(list){
-    let resp = list.filter((valor, indice, self) => {
-        return self.indexOf(valor) === indice;
+function firstChar(list){
+    let resp = list.map((word) => {
+        return word.slice(0,1);
     });
 
-    return console.log(resp);
-}
+    return console.log(resp)
+};
 
-removedups([11, 23, 4, 4, 3, 3, 5]);
-removedups([23, 23, 4, 4, 5]);
+firstChar(["eye", "mouse", "key"]);

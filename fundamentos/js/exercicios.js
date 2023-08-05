@@ -464,6 +464,19 @@ function removedups(list){
 removedups([11, 23, 4, 4, 3, 3, 5]);
 removedups([23, 23, 4, 4, 5]);
 
+// 07 - função que recebe um array de strings e retorna um ovo array apenas com o primieor
+//caracter de cada string
+
+function firstChar(list){
+    let resp = list.map((word) => {
+        return word.slice(0,1);
+    });
+
+    return console.log(resp)
+};
+
+firstChar(["eye", "mouse", "key"]);
+
 
 // ===================================================================================
 
