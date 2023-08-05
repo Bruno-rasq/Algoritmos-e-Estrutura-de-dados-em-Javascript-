@@ -5,55 +5,44 @@ console.log("Console.log");
 console.error("console.error");
 console.warn("console.warn");
 
-class person {
-    constructor(name, age, sex){
-        this.name = name,
-        this.age = age,
-        this.sex = sex
-    }
 
-    showperson(){
-        return console.log(`Olá, meu nome é ${this.name} eu tenho ${this.age} anos de idade.`);
-    }
+function HideEmail(email){
 
-    //estaticos
-    static helloWorld(){
-        console.log("hello World!");
-    }
+    let ahoba = email.indexOf("@");
+    let partOne = email.slice(0, ahoba);
+    let partTwo = email.slice(ahoba + 1, email.length);
+
+    let Part_one_split = partOne.split('');
+    let inicial = Part_one_split[0];
+    Part_one_split.shift();
+    let req_one = Part_one_split.map((char) => {
+        return char = "*"
+    }).join('');
+
+    let resp_one = inicial + req_one;
+
+    let Part_Two_split = partTwo.split('');
+    let last = Part_Two_split[Part_Two_split.length -1];
+    Part_Two_split.pop();
+    let req_two = Part_Two_split.map((char) => {
+        return char = "*"
+    }).join('');
+
+    let resp_two = req_two + last;
+
+    let response = resp_one + "@" + resp_two;
+
+    return console.log(response);
 };
 
-const johnDoe = new person("john Doe", 34, "male");
-console.log(johnDoe);
-johnDoe.showperson();
+HideEmail("johndoe@gmail.com");
+HideEmail("bruno@gmail.com");
+HideEmail("meumanoheleno@gmail.com.br");
 
-// acessando métodos estáticos
-person.helloWorld();
+//.pop() remove ultimo elemento do array
+//.push() adiciona um elemento no final do array
 
+//.shift() remove o primeiro elemento do array
+//.unshift() adiciona um elemento no inicio do array;
 
-// ===============================  [herança] ============================
-
-class animal {
-    constructor(name){
-        this.name = name
-    }
-
-    MadeSomeNoise(){
-        console.log(`${this.name} made some noise`);
-    }
-}
-
-class rabbit extends animal{
-    constructor(name){
-        super(name)
-    }
-
-    MadeSomeNoise(){
-        console.log(`Rabbit ${this.name} Made some squeak`);
-    }
-}
-
-const osvald = new animal("Osvald");
-osvald.MadeSomeNoise();
-
-const Rabbit = new rabbit("Osvaldo");
-Rabbit.MadeSomeNoise();
+//.splice() remove, adiciona ou substitui elemento em posição especifica de array
