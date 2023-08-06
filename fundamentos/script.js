@@ -6,15 +6,16 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-function reflection(arr){
-    let array = arr;
-    let reverse = arr.map((item, indice, array) => {
-        return array[array.length - indice - 1];
+function findSecond(list){
+    list.sort((a,b) => {
+        if(a > b) return 1;
+        if(a < b) return -1;
+        return 0;
     });
 
-    let response = array.concat(reverse);
+    let response = list[list.length - 2];
     return console.log(response);
 }
 
-reflection([1,2,3]);
-reflection([32, 3, 4]);
+findSecond([42, 2, 57, 1000]);
+findSecond([3, 4, 67, 8, 9, 10]);

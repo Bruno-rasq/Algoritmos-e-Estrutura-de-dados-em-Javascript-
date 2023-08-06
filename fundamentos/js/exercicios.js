@@ -608,6 +608,20 @@ countDigits(93);
 // 06 - funçaõ que recebe um array de numeros e retorna o segundo maior valor que aparecer no array
 // exm: ([2, 45, 2, 3, 12, 33]) --> 33
 
+function findSecond(list){
+    list.sort((a,b) => {
+        if(a > b) return 1;
+        if(a < b) return -1;
+        return 0;
+    });
+
+    let response = list[list.length - 2];
+    return console.log(response);
+}
+
+findSecond([42, 2, 57, 1000]);
+findSecond([3, 4, 67, 8, 9, 10]);
+
 // 07 - fução que verifica se uma palavra é palindrono ou não, retornando true ou false
 // exm: "eye" --> true
 // exm : "codict" --> false
