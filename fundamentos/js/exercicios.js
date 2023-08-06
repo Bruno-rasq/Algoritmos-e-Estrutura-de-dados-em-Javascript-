@@ -510,6 +510,18 @@ function allEquals(list){
 // exm: ([1,2,3] 2) --> 3
 // exm: ([2,2,2] 3) --> 6
 
+function SumRange(list, n){
+    let response = 0;
+    for(let i = 0; i < n; i++){
+        response += list[i]
+    };
+
+    return console.log(response);
+};
+
+SumRange([3,10,5], 3);
+SumRange([14,2, 2,5], 2);
+
 
 // ===================================================================================
 
