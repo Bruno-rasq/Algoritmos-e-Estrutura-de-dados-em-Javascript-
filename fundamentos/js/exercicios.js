@@ -620,4 +620,10 @@ countDigits(93);
 
 // 010 - função que converte celsius para fahrenheit
 
+function CelsiusToFahrenheit(c){
+    let response = ( c * (9/5)) + 32;
+    return console.log(response)
+}
 
+CelsiusToFahrenheit(10);
+CelsiusToFahrenheit(45);
