@@ -618,6 +618,19 @@ countDigits(93);
 // 09 - função que retorna um array espelhado
 // exm: ([1,2]) --> [1,2,2,1]
 
+function reflection(arr){
+    let array = arr;
+    let reverse = arr.map((item, indice, array) => {
+        return array[array.length - indice - 1];
+    });
+
+    let response = array.concat(reverse);
+    return console.log(response);
+}
+
+reflection([1,2,3]);
+reflection([32, 3, 4]);
+
 // 010 - função que converte celsius para fahrenheit
 
 function CelsiusToFahrenheit(c){

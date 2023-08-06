@@ -6,10 +6,15 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-function CelsiusToFahrenheit(c){
-    let response = ( c * (9/5)) + 32;
-    return console.log(response)
+function reflection(arr){
+    let array = arr;
+    let reverse = arr.map((item, indice, array) => {
+        return array[array.length - indice - 1];
+    });
+
+    let response = array.concat(reverse);
+    return console.log(response);
 }
 
-CelsiusToFahrenheit(10);
-CelsiusToFahrenheit(45);
+reflection([1,2,3]);
+reflection([32, 3, 4]);
