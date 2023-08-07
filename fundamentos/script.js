@@ -6,26 +6,68 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-function Palindrono(str){
-    
-    // retirei todos os espaços em branco
-    let palindro = str.split(/\s+/).join('');
+// ========================== CLEAR CODE ===================
 
-    // fatiei a string para array
-    let req = palindro.split('');
+// [ 01 - nomeando variaveis || funções || objetos ] ================
 
-    // crie uma variavel que recebe uma inversão do array
-    let reverse = req.map((item, indice, array) => {
-        return array[array.length - indice - 1];
-    });
+// jeito errado
+const d = new Date(); // para data
+const x = 5;
+const y = 10;
 
-    //verifiquei se os dois array são iguais
-    let response = JSON.stringify(req) === JSON.stringify(reverse);
+function format(a){}
+function mp(a, b){}
 
-    return console.log(response);
+const p = {
+    n: "bruno",
+    i: 22
 }
 
-Palindrono("race car");
-Palindrono("eye");
-Palindrono("codict");
+// jeito certo
+const CurrentDate = new Date(); // para data
+const firstNumber = 5;
+const SecondNumber = 10;
 
+function formatPhoneNumber(phone){}
+function Multiply(a, b){}
+
+const pessoa = {
+    nome: "bruno",
+    idade: 22
+}
+
+
+
+// [ 02 - formatação de código ] ================
+
+// identação || espaçamento || chaves || manter padrão
+
+
+// jeito errado
+function testErrado(a,b){
+return a + b;
+}
+
+const nome="heleno";
+
+if(true) console.log("AA que horror");
+
+// jeito certo
+function testCerto(a, b){
+    return (a + b);
+}
+
+const nome2 = "heleno";
+
+if(true){
+    console.log("ai sim");
+} else {
+    console.log("bem melhor");
+}
+
+
+
+// [ 03 - comentando o código ] ================
+
+// evitar redundancia
+// evitar os desnecessário
