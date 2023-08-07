@@ -652,6 +652,29 @@ findSecond([3, 4, 67, 8, 9, 10]);
 // exm: "eye" --> true
 // exm : "codict" --> false
 
+function Palindrono(str){
+    
+    // retirei todos os espaços em branco
+    let palindro = str.split(/\s+/).join('');
+
+    // fatiei a string para array
+    let req = palindro.split('');
+
+    // crie uma variavel que recebe uma inversão do array
+    let reverse = req.map((item, indice, array) => {
+        return array[array.length - indice - 1];
+    });
+
+    //verifiquei se os dois array são iguais
+    let response = JSON.stringify(req) === JSON.stringify(reverse);
+
+    return console.log(response);
+}
+
+Palindrono("race car");
+Palindrono("eye");
+Palindrono("codict");
+
 // 08 - função que recebe um numero e formata-o para numero de telefone
 // exm: ("0987654321") --> (098) 765 4321
 
