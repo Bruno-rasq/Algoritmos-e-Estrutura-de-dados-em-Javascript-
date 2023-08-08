@@ -628,9 +628,6 @@ countDigits(932121);
 countDigits(93);
 
 
-// 05 - função que recebe um array e verifica se pelo menos um dos itens é diferente, entao retorna-o
-// exm: ([2, 2, 2, 2, 2, 4, 2]) ---> 4
-
 // 06 - funçaõ que recebe um array de numeros e retorna o segundo maior valor que aparecer no array
 // exm: ([2, 45, 2, 3, 12, 33]) --> 33
 
@@ -678,6 +675,17 @@ Palindrono("codict");
 // 08 - função que recebe um numero e formata-o para numero de telefone
 // exm: ("0987654321") --> (098) 765 4321
 
+function PhoneNumberFormat(phone){
+
+    let phoneNumber = /(\d{3})(\d{3})(\d{4})/g;
+    let formatNumber = "\($1\) $2 $3";
+
+    let response = phone.replace(phoneNumber, formatNumber);
+    return console.log(response);
+}
+
+PhoneNumberFormat("0987654321");
+
 // 09 - função que retorna um array espelhado
 // exm: ([1,2]) --> [1,2,2,1]
 
@@ -703,3 +711,15 @@ function CelsiusToFahrenheit(c){
 
 CelsiusToFahrenheit(10);
 CelsiusToFahrenheit(45);
+
+
+// 05 - função que recebe um array e verifica se pelo menos um dos itens é diferente, entao retorna-o
+// exm: ([2, 2, 2, 2, 2, 4, 2]) ---> 4
+
+
+// ===================================================================================
+
+
+// - [NIVEL HACKEAR]
+
+/* */
