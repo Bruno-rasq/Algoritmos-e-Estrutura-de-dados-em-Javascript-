@@ -129,3 +129,14 @@ removeDups("abccdeefkkk");
     test 3 -> ("latin") => "atinlay"
 
 */
+
+function pigLatin(str){
+    let word = str.split('');
+    let inicial = word.splice(0,1);
+
+    let response = word.join('') + inicial + "ay"
+    return console.log(response)
+}
+
+pigLatin("pig");
+pigLatin("latin");
