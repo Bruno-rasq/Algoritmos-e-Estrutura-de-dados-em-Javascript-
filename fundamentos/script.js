@@ -5,13 +5,18 @@ console.log("Console.log");
 console.error("console.error");
 console.warn("console.warn");
 
-function PhoneNumberFormat(phone){
+function anagramDetector(str1, str2){
 
-    let phoneNumber = /(\d{3})(\d{3})(\d{4})/g;
-    let formatNumber = "\($1\) $2 $3";
+    let word1 = str1.split('');
+    let word2 = str2.split('');
 
-    let response = phone.replace(phoneNumber, formatNumber);
-    return console.log(response);
+    if(word1.length == word2.length){
+        const response = word1.some((el) => word2.includes(el));
+        return console.log(response);
+    } else {
+        return console.log(false);
+    }
 }
 
-PhoneNumberFormat("0987654321");
+anagramDetector("car", "arc");
+anagramDetector("race", "car");

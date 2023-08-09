@@ -1,5 +1,14 @@
-// 01 - função que recebe duas strings e verifica se uma é anagrama de outra
+/*
+    01 - anagram detector
+    @function anagramDetector(str1, str2)
+    a função deverá receber como parametro duas strings @str1 e @str2
+    enão verificar se uma é anagrama da outra e retornar um boolean
 
+    test 1 - ("car", "arc") => true
+    test 2 - ("race", "car") => false
+
+*/
+//[RESPOSTA - 01]
 function anagramDetector(str1, str2){
 
     let word1 = str1.split('');
@@ -62,7 +71,7 @@ anagramDetector("race", "car");
     test 2 -> ("abccdeefkkk") => "abcdefk"
 
 */
-
+//[RESPOSTA - 05]
 function removeDups(str){
     let response = str.replace(/(.)(?=.*\1)/g, "")
     return console.log(response);
@@ -94,6 +103,27 @@ removeDups("abccdeefkkk");
     test 2 -> "(()" => false
 
 */
+//[RESPOSTA -07]
+function validParentheses(str){
+
+    let openParentheres = str.split('').filter((char) => {
+        return char == "(";
+    });
+
+    let closeparentheses = str.split('').filter((char) => {
+        return char == ")";
+    });
+
+    if( openParentheres.length == closeparentheses.length){
+        return console.log(true);
+    } else {
+        return console.log(false)
+    };
+
+}
+
+validParentheses("()()");
+validParentheses("()(");
 
 /*
     08 - next bigger number 
@@ -129,7 +159,7 @@ removeDups("abccdeefkkk");
     test 3 -> ("latin") => "atinlay"
 
 */
-
+//[RESPOSTA - 010]
 function pigLatin(str){
     let word = str.split('');
     let inicial = word.splice(0,1);
