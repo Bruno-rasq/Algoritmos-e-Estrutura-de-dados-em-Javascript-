@@ -99,11 +99,24 @@ removedups([23, 23, 4, 4, 5]);
 
 
 /*
-    06 - @function allEquals(list)
-         deverá returnar um boolean caso todos os valores da @list
-         forem iguais
-*/
+    06 -  all equals
+    @function allEquals(list)
+    a funcao receberá uma lista numerica como parametro e deverá
+    devolver um boolean caso todos os valores da lista forem iguais.
 
+    test 1 - ([1,2,1,1,1,1]) => false
+    test 2 - ([2,2,2]) => true
+*/
+//[RESPOSTA - 06]
+function allEquals(list){
+
+    let response = list.every((value) => value == list[0]);
+
+    return console.log(response);
+}
+
+allEquals([1,2,1,1,1]);
+allEquals([2,2,2]);
 
 // 07 - função que recebe um array de strings e retorna um ovo array apenas com o primieor
 //caracter de cada string

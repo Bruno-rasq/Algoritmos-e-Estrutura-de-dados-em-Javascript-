@@ -5,18 +5,12 @@ console.log("Console.log");
 console.error("console.error");
 console.warn("console.warn");
 
-function anagramDetector(str1, str2){
+function allEquals(list){
 
-    let word1 = str1.split('');
-    let word2 = str2.split('');
+    let response = list.every((value) => value == list[0]);
 
-    if(word1.length == word2.length){
-        const response = word1.some((el) => word2.includes(el));
-        return console.log(response);
-    } else {
-        return console.log(false);
-    }
+    return console.log(response);
 }
 
-anagramDetector("car", "arc");
-anagramDetector("race", "car");
+allEquals([1,2,1,1,1]);
+allEquals([2,2,2]);
