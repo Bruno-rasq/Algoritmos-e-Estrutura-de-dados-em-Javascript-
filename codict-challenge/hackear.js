@@ -128,14 +128,33 @@ validParentheses("()(");
 /*
     08 - next bigger number 
     @function nestBiggerNumber(n)
-    a função receberá um numero positivo, e deverá teronar o proximo maior numero possivel de ser
+    a função receberá um numero positivo, e deverá retornar o proximo maior numero possivel de ser
     formado pelos mesmos caracteres, caso não seja possivel retornar um numero maior com os mesmos
     digitos retorne -1
 
-    test 1 -> (213) => 321
+    test 1 -> (213) => 231
     test 2 -> (999) => -1
 
 */
+//[RESPOSTA - 08]
+function nextBiggerNumber(n) {
+
+    let number = n.toString();
+    let arr = number.split('');
+
+    let [f, ...rest] = arr;
+    let req = f + rest.sort((a, b) => b - a).join("");
+
+    if (req == n) {
+        return console.log(-1)
+    } else {
+        return console.log(parseInt(req))
+    }
+
+}
+
+nextBiggerNumber(213);
+nextBiggerNumber(999);
 
 /*
     09 - roman numerals

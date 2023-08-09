@@ -5,12 +5,21 @@ console.log("Console.log");
 console.error("console.error");
 console.warn("console.warn");
 
-function allEquals(list){
+function nextBiggerNumber(n) {
 
-    let response = list.every((value) => value == list[0]);
+    let number = n.toString();
+    let arr = number.split('');
 
-    return console.log(response);
+    let [f, ...rest] = arr;
+    let req = f + rest.sort((a, b) => b - a).join("");
+
+    if (req == n) {
+        return console.log(-1)
+    } else {
+        return console.log(parseInt(req))
+    }
+
 }
 
-allEquals([1,2,1,1,1]);
-allEquals([2,2,2]);
+nextBiggerNumber(213);
+nextBiggerNumber(999);
