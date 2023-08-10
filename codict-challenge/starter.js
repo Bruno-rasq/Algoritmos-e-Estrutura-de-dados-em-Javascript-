@@ -1,5 +1,13 @@
-// 01 - função que troque as vogais por numeros de 1 a 5
-// a=1, e=2, i=3, o=4, u=5
+/*
+    01 - troque as vogais por numeros
+    @function swapVowels(word)
+    a função receberá uma string, e deverá trocar as vogais por numeros
+    a=1, e=2, i=3, o=4, u=5
+
+    test -1 () =>
+    test -2 () =>
+
+*/
 
 function swapVowels(word){
     
@@ -40,7 +48,16 @@ function swapVowels(word){
 swapVowels("hello world!");
 
 
-// 02 - função que organiza strings de um array por ordem de tamanho das palavras
+
+/*
+    02 - organize string
+    @function SortList(list)
+    a função recebe uma lista de strings e deverá ordena-la por tamanho das palavras
+
+    test -1 () =>
+    test -2 () =>
+
+*/
 
 function SortList(list){
     let response = list.sort((a,b) => {
@@ -56,7 +73,16 @@ function SortList(list){
 SortList(["eye", "mouse", "a"]);
 
 
-// 03 - função que recebe um numero e devolve uma string formada pelo quadrado de cada digito
+
+/*
+    03 - quadrado de todos
+    @function squareItAll(n)
+    função que recebe um numero e devolve uma string formada pelo quadrado de cada digito
+
+    test -1 () =>
+    test -2 () =>
+
+*/
 
 function squareItAll(n){
     let split = (''+n).split('');
@@ -71,7 +97,16 @@ squareItAll(67);
 squareItAll(123);
 
 
-// 04 - função que remova todas as vogais de ums string
+
+/*
+    04 - remova as vogais
+    @function removeVowels(str)
+    função que remova todas as vogais de ums string
+
+    test -1 () =>
+    test -2 () =>
+
+*/
 
 function removeVowels(str){
     let lower = str.toLowerCase();
@@ -84,7 +119,16 @@ removeVowels("vowels");
 removeVowels("development");
 
 
-// 05 - função que recebe um array e remove todos os valores duplicados
+
+/*
+    05 - remova as duplas
+    @function removedups(list)
+    função que recebe um array e remove todos os valores duplicados
+
+    test -1 () =>
+    test -2 () =>
+
+*/
 
 function removedups(list){
     let resp = list.filter((valor, indice, self) => {
@@ -118,8 +162,17 @@ function allEquals(list){
 allEquals([1,2,1,1,1]);
 allEquals([2,2,2]);
 
-// 07 - função que recebe um array de strings e retorna um ovo array apenas com o primieor
-//caracter de cada string
+
+/*
+    07 - apenas o primeiro caracter
+    @function firstChar(list)
+    função que recebe um array de strings e retorna um novo array apenas com o primeiro
+    caracter de cada string
+
+    test -1 () =>
+    test -2 () =>
+
+*/
 
 function firstChar(list){
     let resp = list.map((word) => {
@@ -132,10 +185,18 @@ function firstChar(list){
 firstChar(["eye", "mouse", "key"]);
 
 
-// 08 -função que recebe dois parametros, uma lista de numeros e um numero
-//e devreá retornar a soma dos itens da list de acordo com o numero
-// exm: ([1,2,3] 2) --> 3
-// exm: ([2,2,2] 3) --> 6
+
+
+/*
+    08 - some o alcance
+    @function SumRange(list, n)
+    função que recebe dois parametros, uma lista de numeros e um numero
+    e devreá retornar a soma dos itens da list de acordo com o numero
+
+    test -1 ([1,2,3] 2) --> 3
+    test -2 ([2,2,2] 3) --> 6
+
+*/
 
 function SumRange(list, n){
     let response = 0;
@@ -150,7 +211,16 @@ SumRange([3,10,5], 3);
 SumRange([14,2, 2,5], 2);
 
 
-// 09 - função que recebe um valor numerico e retorna um array com os divisores 
+ 
+/*
+    09 - todos os divisores
+    @function divisors(n)
+    função que recebe um valor numerico e retorna um array com os divisores 
+
+    test -1 () =>
+    test -2 () =>
+
+*/
 
 function divisors(n){
 
@@ -170,51 +240,17 @@ divisors(8);
 divisors(10);
 
 
-// 010 - função que recebe um email como parametro e devolve uma mascara do email
-// exm : johndoe@gmail.com ---> J******@********m
 
+/*
+    010 - mascara para email
+    @function HideEmail(email)
+    função que recebe um email como parametro e devolve uma mascara do email
+
+    test -1 ("johndoe@gmail.com") => "J******@********m"
+    test -2 ("maria@gmail.com.br") => "m****@***********r"
+
+*/
 function HideEmail(email){
-
-    let ahoba = email.indexOf("@");
-    let partOne = email.slice(0, ahoba);
-    let partTwo = email.slice(ahoba + 1, email.length);
-
-    let Part_one_split = partOne.split('');
-    let inicial = Part_one_split[0];
-    Part_one_split.shift();
-    let req_one = Part_one_split.map((char) => {
-        return char = "*"
-    }).join('');
-
-    let resp_one = inicial + req_one;
-
-    let Part_Two_split = partTwo.split('');
-    let last = Part_Two_split[Part_Two_split.length -1];
-    Part_Two_split.pop();
-    let req_two = Part_Two_split.map((char) => {
-        return char = "*"
-    }).join('');
-
-    let resp_two = req_two + last;
-
-    let response = resp_one + "@" + resp_two;
-
-    return console.log(response);
-};
-
-HideEmail("johndoe@gmail.com");
-HideEmail("bruno@gmail.com");
-HideEmail("meumanoheleno@gmail.com.br");
-
-//.pop() remove ultimo elemento do array
-//.push() adiciona um elemento no final do array
-
-//.shift() remove o primeiro elemento do array
-//.unshift() adiciona um elemento no inicio do array;
-
-//.splice() remove, adiciona ou substitui elemento em posição especifica de array
-
-function HideEmail2(email){
 
     let arr = email.split("@");
     let part1 = arr[0].split('');
