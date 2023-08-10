@@ -1,6 +1,13 @@
+/*
+    01 - pegue as iniciais
+    @function GetInitials(name)
+    a função recebe uma string com o nome de uma pessoa @name
+    e devolve as iniciais do nome
 
-// 01 - crie uma função que receba uma string como o nome de uma pessoa e devolva as iniciais
-// exm: "bruno dias" ---> "B.D";
+    test -1 ("john doe") => "J.D"
+    test -2 ("bruno rasq") => "B.R"
+
+*/
 
 function GetInitials(name){
 
@@ -18,7 +25,16 @@ function GetInitials(name){
 GetInitials("bruno dias");
 
 
-// 02 - encontre o menor valor de uma array
+
+/*
+    02 - encontre o menor valor 
+    @function findTheSmallest(arr)
+    encontre o menor valor de uma array
+
+    test - 1 ([2, 4, 3, 5, 22, 10]) => 2
+    test - 2 ([2, 4, 3, 77, 5, 1]) => 1
+
+*/
 
 function FindTheSmallest(arr){
     let min = Math.min(...arr);
@@ -28,7 +44,16 @@ function FindTheSmallest(arr){
 FindTheSmallest([2, 6, 4, 8, 3, 21, 14]);
 
 
-// 03 - função que receba uma string e retorne a string sem o caracter inicial e final
+
+/*
+    03 - remova as iniciais e finais 
+    @function removeChar(str)
+    a função recebe uma string como parametro @str e remove o caracter iniciale final
+
+    test - 1 ("javascript") => "avascrip"
+    test - 2 ("turtles") => "urtle"
+
+*/
 
 function RemoveChars(str){
 
@@ -41,8 +66,17 @@ RemoveChars("javascript");
 RemoveChars("turtles");
 
 
-// 04 - função que receba uma string e devolva a memsa string inversa
-//porem somente a ordem das palavras tem que ser inversa, as palavras ainda devem ser legiveis
+
+/*
+    04 - inverta as palavras
+    @function reveseAllWords(strg)
+    a função recebe uma strings @strg e então inverte a ordem das palavras
+    sem deformar as mesmas
+
+    test - 1 ("bom dia") => "dia bom" 
+    test - 2 ("dream big and dare to fail") => "fail to dare and big dream" 
+
+*/
 
 function reverseAllWord(strg){
 
@@ -55,8 +89,17 @@ function reverseAllWord(strg){
 reverseAllWord("dream big and dare to fail");
 
 
-// 05 - função que transcreva DNA para RNa
-// nota:na estrutura rna a terminação quimica (t) é substituida por (U);
+
+/*
+    05 - DNA para RNA
+    @function translateDNA(dna)
+    a funçaõ deverá transcrever DNA para RNA
+    // nota:na estrutura rna a terminação quimica (t) é substituida por (U);
+
+    test - 1 ("CGATAT") => "CGAUAU" 
+    test - 2 ("GCAT") => "CGAU" 
+
+*/
 
 function translateDNA(dna){
     let arr = dna.split('');
@@ -71,7 +114,15 @@ translateDNA("CGATAT");
 translateDNA("GCAT");
 
 
-// 06 - função que recebe uma string, e retorna a quantidade de vogais presentes
+/*
+    06 - conte a quantidade de vogais
+    @function countVowels(str)
+    a função recebe uma string e retorna a quantidade de vogais presnetes na mesma
+
+    test - 1 (" frase teste") => 4 
+    test - 2 ("aeiou") => 5
+
+*/
 
 function CountVogal(str){
 
@@ -96,7 +147,16 @@ CountVogal("aeiou");
 CountVogal("AEIOU");
 
 
-// 07 - função que receba um array com valores e retorne a media do array
+
+/*
+    07 - calcule a média 
+    @function getAverage(arr)
+    a função recebe um array numerico e retorna a média dos valores
+
+    test - 1 ([1,2,3,4,5]) => 3
+    test - 2 ([2,2,2,2]) => 2
+
+*/
 
 function getAverage(arr){
     let response = 0;
@@ -113,7 +173,17 @@ function getAverage(arr){
 getAverage([1, 2, 3, 4, 5]);
 
 
-// 08 - função que recebe uma string e devolva o tamanho da menor palavra da string
+
+/*
+    08 - o tamanho da menor palavra
+    @function shortestWord(str)
+    a função receberá uma string e deverá retornar o tamanho da menor palavra que a string
+    conter
+
+    test - 1 ("string teste para verificar o tamanho das palavras em umm array") => 1
+    test - 2 (" alguma coisa") => 5
+
+*/
 
 function shortestWord(str){
 
@@ -134,7 +204,17 @@ function shortestWord(str){
 shortestWord("string teste para verificar o tamanho das palavras em umm array");
 
 
-// 09 - função que receba um array e retorne um novo array com o maior e o menor valor do array anterior.
+
+/*
+    09 - pegue o maior e menor
+    @function returnTwo(arr)
+    a função recebe uma lista de valores e retorna uma nova lista com o menor e maior valor da
+    lista anterior
+
+    test - 1 ([2,4,6,20]) => [2,20]
+    test - 2 ([3,5,1,88,33]) => [3,88]
+
+*/
 
 function returnTwo(arr){
 
@@ -150,7 +230,17 @@ function returnTwo(arr){
 returnTwo([10, 45, -42]);
 
 
-// 010 - função que recebe uma string e transcreve para a lingua do "P"
+
+/*
+    010 - lingua do "P"
+    @function PLanguage()
+    função que recebe uma string e transcreve para a lingua do "p"
+    nota: a lingua do "P" consiste em adicionar um "P" no inicio de cada palavra
+
+    test - 1 ("simples é difirente de fácil") => "psimples pé pdifirente pde pfácil"
+    test - 2 () => 
+
+*/
 
 function PLanguage(strg){
     //fatiando a string e transformando em array
