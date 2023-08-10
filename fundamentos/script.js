@@ -5,21 +5,32 @@ console.log("Console.log");
 console.error("console.error");
 console.warn("console.warn");
 
-function nextBiggerNumber(n) {
+function FindUnique(list){
 
-    let number = n.toString();
-    let arr = number.split('');
+    let unique = {}
 
-    let [f, ...rest] = arr;
-    let req = f + rest.sort((a, b) => b - a).join("");
+    /*
+        para cada elemento é criado um index no objeto unique e incrementado
+        a quantidade de vezes que o elemento aparece
+    */
+    list.forEach((el) => unique[el] = unique[el] ? unique[el] + 1 : 1);
 
-    if (req == n) {
-        return console.log(-1)
-    } else {
-        return console.log(parseInt(req))
+    let resp = {}
+
+    /*
+        depois de pronto o objeto, basta percorrer o objeto a procura do elemento
+        cujo a incrementação é igual a 1, ou seja que apareceu somente 1 vex
+        e atribuir esse elemento a variavel resp
+    */
+    for(i in unique){
+        if(unique[i] === 1){
+            resp = i;
+        } 
     }
 
+    return console.log(resp)
 }
 
-nextBiggerNumber(213);
-nextBiggerNumber(999);
+FindUnique([1,1,1,1,2,1,1]);
+FindUnique([3,2,2,2]);
+FindUnique([2,2,4,2]);

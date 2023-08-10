@@ -1,4 +1,10 @@
-// 01 - função que receba um numero e retorne sua transcrição em binário
+
+/*
+    01 - transcreva para binário
+    @function translateBinary(n)
+    função que receba um numero e retorne sua transcrição em binário
+
+*/
 
 function translateBinary(n){
 
@@ -11,7 +17,13 @@ translateBinary(2);
 translateBinary(23);
 
 
-// 02 - função que verifica se um numero é primo ou não
+
+/*
+    02 - numero primo
+    @function isprime(n)
+    função que verifica se um numero é primo ou não
+
+*/
 
 function isprime(n){
 
@@ -34,9 +46,15 @@ isprime(8);
 isprime(27);
 
 
-// 03 - transcreva snakeCase para pascal
-// snakecase => "hello_world"
-// pascal => "HelloWorld";
+
+/*
+    03 - snakecase to pascal
+    @function snakeToPascal(word)
+    transcreva snakeCase para pascal
+    snakecase => "hello_world"
+    pascal => "HelloWorld"
+
+*/
 
 function snakeToPascal(word){
 
@@ -66,7 +84,43 @@ snakeToPascal("hello_world");
 
 */
 
-// 05 - funcao que recebe um numero e retorne a quantidade de caracteres 0-9 
+function FindUnique(list){
+
+    let unique = {}
+
+    /*
+        para cada elemento é criado um index no objeto unique e incrementado
+        a quantidade de vezes que o elemento aparece
+    */
+    list.forEach((el) => unique[el] = unique[el] ? unique[el] + 1 : 1);
+
+    let resp = {}
+
+    /*
+        depois de pronto o objeto, basta percorrer o objeto a procura do elemento
+        cujo a incrementação é igual a 1, ou seja que apareceu somente 1 vex
+        e atribuir esse elemento a variavel resp
+    */
+    for(i in unique){
+        if(unique[i] === 1){
+            resp = i;
+        } 
+    }
+
+    return console.log(resp)
+}
+
+FindUnique([1,1,1,1,2,1,1]);
+FindUnique([3,2,2,2]);
+FindUnique([2,2,4,2]);
+
+
+/*
+    05 - conte os digitos
+    @function countDigits(n)
+    funcao que recebe um numero e retorne a quantidade de caracteres 0-9
+
+*/
 
 function countDigits(n){
 
@@ -82,8 +136,14 @@ function countDigits(n){
 countDigits(932121);
 countDigits(93);
 
-// 06 - funçaõ que recebe um array de numeros e retorna o segundo maior valor que aparecer no array
-// exm: ([2, 45, 2, 3, 12, 33]) --> 33
+
+/*
+    06 - o segundo maior valor
+    @function findSecond(list)
+    funçaõ que recebe um array de numeros e retorna o segundo maior valor que aparecer no array
+    exm: ([2, 45, 2, 3, 12, 33]) --> 33
+
+*/
 
 function findSecond(list){
     list.sort((a,b) => {
@@ -100,9 +160,15 @@ findSecond([42, 2, 57, 1000]);
 findSecond([3, 4, 67, 8, 9, 10]);
 
 
-// 07 - fução que verifica se uma palavra é palindrono ou não, retornando true ou false
-// exm: "eye" --> true
-// exm : "codict" --> false
+
+/*
+    07 - palindrono
+    @function Palindrono(str)
+    fução que verifica se uma palavra é palindrono ou não, retornando true ou false
+    exm: "eye" --> true
+    exm : "codict" --> false
+
+*/
 
 function Palindrono(str){
     
@@ -128,8 +194,14 @@ Palindrono("eye");
 Palindrono("codict");
 
 
-// 08 - função que recebe um numero e formata-o para numero de telefone
-// exm: ("0987654321") --> (098) 765 4321
+
+/*
+    08 - formate numero de telefone
+    @function PhoneNumberFormat(phone)
+    função que recebe um numero e formata-o para numero de telefone
+    exm: ("0987654321") --> (098) 765 4321
+
+*/
 
 function PhoneNumberFormat(phone){
 
@@ -143,8 +215,14 @@ function PhoneNumberFormat(phone){
 PhoneNumberFormat("0987654321");
 
 
-// 09 - função que retorna um array espelhado
-// exm: ([1,2]) --> [1,2,2,1]
+
+/*
+    09 - array espelhado
+    @function reflection(arr)
+    função que retorna um array espelhado
+    exm: ([1,2]) --> [1,2,2,1]
+
+*/
 
 function reflection(arr){
     let array = arr;
@@ -161,7 +239,13 @@ reflection([32, 3, 4]);
 
 
 
-// 010 - função que converte celsius para fahrenheit
+
+/*
+    010 - celcius para fahrenheit
+    @function CelsiusToFahrenheit(c)
+    função que converte celsius para fahrenheit
+
+*/
 
 function CelsiusToFahrenheit(c){
     let response = ( c * (9/5)) + 32;
