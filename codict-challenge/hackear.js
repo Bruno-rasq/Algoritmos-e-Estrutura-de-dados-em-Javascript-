@@ -36,7 +36,16 @@ anagramDetector("race", "car");
     test 2 -> "aAbBcC" => false
 
 */
+function hasUniqueCharacter(str){
 
+    let NoReps = str.replace(/(.)(?=.*\1)/gi, "");
+    let response = str.length == NoReps.length ? true : false;
+
+    return console.log(response);
+}
+
+hasUniqueCharacter("abcdef");
+hasUniqueCharacter("aAbBcC");
 
 /*
     03 - compress string
