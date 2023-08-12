@@ -10,19 +10,29 @@ console.warn("console.warn");
 function RomanNumber(n) {
 
     const RomanNumberMap = {
-        0:["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"], //Unidade
-        1:["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"], //Dezena
-        2:["C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"], //Centena
-        3:["M"] // Milhar
+        u:["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"], //Unidade
+        d:["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"], //Dezena
+        c:["C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"], //Centena
+        m:["M"] // Milhar
     };
 
     let str = Number(n).toString();
     let arry = str.split('').reverse();
-    
 
-    return console.log(arry);
+    let uni = Number(arry[0]);
+    let dez = Number(arry[1]);
+    let cen = Number(arry[2]);
+    let mil = Number(arry[3]);
+    
+    arry[0] = RomanNumberMap.u[uni - 1] ?? "";
+    arry[1] = RomanNumberMap.d[dez - 1] ?? "";
+    arry[2] = RomanNumberMap.c[cen - 1] ?? "";
+    arry[3] = RomanNumberMap.m[mil - 1] ?? "";
+
+    let response = arry.reverse().join('');
+
+    return console.log(response);
 }
 
-RomanNumber(23);
-RomanNumber(3);
-RomanNumber(307);
+RomanNumber(4);
+
