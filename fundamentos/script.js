@@ -23,11 +23,14 @@ function twoSum(nums, target){
 
     for(let i =0; i<nums.length; i++){
 
-        let index = nums.indexOf(nums[i]);
+        if(nums[i] < target){
+            
+            let index = nums.indexOf(nums[i]);
 
-        while ( index != -1){
-            response.push(index);
-            index = nums.indexOf(nums[i], index);
+            // while ( index != -1){
+            //     response.push(index);
+            //     index = nums.indexOf(nums[i], index + 1);
+            // }
         }
     }
 
@@ -36,5 +39,22 @@ function twoSum(nums, target){
 
 twoSum([2, 4, 5], 6);
 twoSum([3, 3], 6);
+
+
+/*
+    como pegar os indices de items repetido no array
+
+*/
+// var indices = [];
+// var array = [2, 4, 3, 4, 2, 3, 2];
+
+// var elemento = array[0];
+// var idx = array.indexOf(elemento);
+// while (idx != -1) {
+//   indices.push(idx);
+//   idx = array.indexOf(elemento, idx + 1);
+// }
+// console.log(indices);
+// // [0, 2, 4]
 
 
