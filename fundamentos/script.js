@@ -6,62 +6,23 @@ console.error("console.error");
 console.warn("console.warn");
 
 
-function romanNumber(n){
 
+function RomanNumber(n) {
 
-    let valor = "";
-
-    switch(n){
-        case 1:
-            valor = "I";
-            break;
-
-        case 5:
-            valor = "V";
-            break;
-
-        case 10:
-            valor = "X";
-            break;
-
-        case 50:
-            valor = "L";
-            break;
-
-        case 100:
-            valor = "C";
-            break;
-
-        case 500:
-            valor = "D";
-            break;
-
-        case 1000:
-            valor = "M";
-            break;
-
-        default:
+    const RomanNumberMap = {
+        0:["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"], //Unidade
+        1:["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"], //Dezena
+        2:["C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"], //Centena
+        3:["M"] // Milhar
     };
 
-    return console.log(valor)
+    let str = Number(n).toString();
+    let arry = str.split('').reverse();
+    
 
+    return console.log(arry);
 }
 
-romanNumber(5);
-romanNumber(50);
-romanNumber(1000);
-
-
-/*
-    I = 1
-    V = 5
-    x = 10
-    L = 50
-    C = 100
-    D = 500
-    M = 1000
-
-    repetem no máximo 3 vezes --> I, X, C, M
-    não repetem  --> V, L D 
-
-*/
+RomanNumber(23);
+RomanNumber(3);
+RomanNumber(307);
