@@ -212,7 +212,7 @@ function romanNumerals(n) {
         m: ["M", "MM", "MMM", "MMMM", "MMMMM"] // Milhar
     };
 
-    if (n > 0 && n < 5000) {
+    if (n > 0 && n < 5999) {
         let str = Number(n).toString();
         let arry = str.split('').reverse();
 
