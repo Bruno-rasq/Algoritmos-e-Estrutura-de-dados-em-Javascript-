@@ -23,13 +23,11 @@ function twoSum(nums, target){
 
     for(let i =0; i<nums.length; i++){
 
-        let indice = nums.findIndex((el) => {
-            return el == nums[i];
-        });
-        
-        if(nums[i] <= target){
+        let index = nums.indexOf(nums[i]);
 
-            response.push(indice)
+        while ( index != -1){
+            response.push(index);
+            index = nums.indexOf(nums[i], index);
         }
     }
 
