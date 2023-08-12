@@ -23,14 +23,14 @@ function twoSum(nums, target){
 
     for(let i =0; i<nums.length; i++){
 
-        if(nums[i] < target){
+        if(nums[i] <= target){
             
             let index = nums.indexOf(nums[i]);
 
-            // while ( index != -1){
-            //     response.push(index);
-            //     index = nums.indexOf(nums[i], index + 1);
-            // }
+            while ( index != -1 ){
+                response.push(index);
+                index = nums.indexOf(nums[i], index + 1);
+            }
         }
     }
 
@@ -38,7 +38,7 @@ function twoSum(nums, target){
 }
 
 twoSum([2, 4, 5], 6);
-twoSum([3, 3], 6);
+twoSum([3, 8, 6], 6);
 
 
 /*
