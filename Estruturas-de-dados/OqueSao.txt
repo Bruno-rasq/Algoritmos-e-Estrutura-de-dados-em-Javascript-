@@ -1,0 +1,14 @@
+estruturas de dados nada mais são do que formas de estruturar informações(dados)
+
+
+Principais estruturas usada:
+
+    - array ( vetor ou matriz ).
+    - filas.
+    - pilhas. 
+    - arvore ( exm: DOM ).
+    - Hash tables.
+    - grafos. 
+    - listas vinculadas.
+
+operações: Construir, consultar, Inserir e remover.

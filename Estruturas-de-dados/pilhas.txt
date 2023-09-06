@@ -1,0 +1,27 @@
+[PILHAS - stacks]:
+
+    - um exemplo utilizado para exemplificar o conceito de pilha é a pilhas de livros, no qual o individuo possue uma caixa com varios livros desorganizados e então começa a retira-los um-por-um colocando-os um encima do outro.
+    isso é uma pilha
+
+    - neste caso para visualizar algum dos livros da pilha sem derruba-la é necessário retirar um-por-um até chegar o item que esteja buscando, introduzindo o método "LIFO" acrônimo para "Last In First Out" ou seja, o primeiro que entra é o ultimo que sai.
+
+    - um exemplo de pilha sendo aplicado na internet é o histórico de navegação do usuário, que guarda os links dos sites que a pessoa/ o usuário frequentou na sequência que ele navega.
+
+    exem:
+
+        [github.com]
+        [youtube.com]
+        [google.com]
+     
+     - nesse caso, o primeiro site que entrei foi o google, depois o youtube e por fim o site do github, como o github foi o ultimo local que frequentei ele se torna o primeiro da pilha, caso eu quissese navegar no meu historico e voltar para o ultimo site que frequentei, seria necessario retirar o primeiro item da pilha pois esse foi o ultimo a entrar (LIFO) e assim iria parar no site do youtube.com que vem antes ao github.com.
+
+     entre outros exemplos como o desfazer(ctrl+z) e o refazer(ctrl+y)
+
+
+
+     [métodos em javascript]:
+
+        - push (empurrar): adiciona um novo item no final da pilha
+        - pop ( desempilhar): retorna o ultimo item da pilha apos remove-lo
+        - isEmpty : retorna um boolean dependendo se a pilha está ou não vazia.
+        - top: retorna o item do top da pilha sem remove-lo.
