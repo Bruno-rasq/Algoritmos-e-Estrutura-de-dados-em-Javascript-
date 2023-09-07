@@ -3,10 +3,10 @@ estruturas de dados nada mais são do que formas de estruturar informações(dad
 
 Principais estruturas usada:
 
-    - array ( vetor ou matriz ).
+    - array.
     - filas.
-    - pilhas. 
-    - arvore ( exm: DOM ).
+    - pilhas. [checked]
+    - arvore.
     - Hash tables.
     - grafos. 
     - listas vinculadas.

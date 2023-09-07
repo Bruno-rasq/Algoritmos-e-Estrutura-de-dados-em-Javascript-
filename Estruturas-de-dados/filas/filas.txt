@@ -1,0 +1,14 @@
+[filas - queue]:
+
+    - existem vários exemplos de filas, a fila de um banco ou fila para ser atendido no caixa ou etc...
+    nessa estrutura de dados o padrão de saida é o "FIFO" first in, first out. ou seja, o primeiro que entra é o primeiro que sai.
+
+    <- [bruno] <- [heleno] <- [yuri] <- [osvaldo];
+
+    nesse caso o bruno é o primeiro da fila e será o primeiro em todas as operações feitas, ele só deixa de ser o primeiro quando sair da fila nesse caso o heleno se torna o primeiro da fila.
+
+
+    dependendo da orientação da fila:
+
+         unshift() entra, pop() sai se fila for /p direita
+         push() entra, shift()sai se a fila for /p esquerda
