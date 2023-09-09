@@ -4,12 +4,12 @@ Estrutura de dados é o ramo da computação que estuda os diversos mecanismos d
 
 Principais estruturas usada:
 
-    - array.
+    - array. [checked1]
     - filas. [checked1]
     - pilhas. [checked1]
+    - listas encadeada.
     - arvore.
     - Hash tables.
     - grafos. 
-    - listas vinculadas.
 
 operações: Construir, consultar, Inserir e remover.

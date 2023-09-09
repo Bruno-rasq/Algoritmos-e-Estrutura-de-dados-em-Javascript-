@@ -1,0 +1,11 @@
+[lista linear]:
+
+    - lista linear é uma estrutura de dados na qual elementos de mesmo tipo de dado estão organizados de maneira sequencial. não necessáriamente estes elemento precisam estar fisicamente em sequencia. mas todos elementos devem ter exatamente um sucessor e um antecessor com excessaõ do primeiro que não possue antecessor e o ultimo que não possue sucessor.
+
+[lista linear sequencial]:
+
+    - numa lista linear sequencial(ou continua), os elementos além de estarem em uma sequência lógica, estão também fisicamente em sequ~encia. A maneira mais simples de acomodar uma lista linear em um computador é atravez da utilização de vetores(arrays).
+
+[lista encadeada ou ligada]:
+
+    - lista encadeada é uma lista linear dispersa, isto é, os elementos não estão necessáriamente armazenados em sequencia na memeoria, porém a ordem lógica entre os elementos que compóem a lista é mantida
