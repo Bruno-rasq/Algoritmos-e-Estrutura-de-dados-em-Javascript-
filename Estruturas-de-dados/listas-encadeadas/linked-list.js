@@ -2,6 +2,7 @@
 
 function linkedList(){
 
+    let tail = null;
     let head = null; // ponto inicial
     let length = 0; // tamanho 
 
@@ -13,7 +14,7 @@ function linkedList(){
         }
     };
 
-    // funçã para adicionar um novo nó
+    // o(n)
     const add = (value) => {
 
         if(!head){
@@ -30,6 +31,22 @@ function linkedList(){
         length++
         return node.next
 
+    };
+
+    // o(1)
+    const add2 = (value) => {
+
+        if(!head){
+            head = Node(value);
+            tail = head
+            length++
+            return head
+        }
+
+        let node = Node(value)
+        tail.next = node
+        tail = node
+        return node
     };
 
     const getByIndex = (index) => {
@@ -67,16 +84,42 @@ function linkedList(){
         }
 
         return null
-    }
+    };
+
+    const remove = (node) => {
+
+        // lista vazia
+        if(length == 0){
+            return false
+        }
+
+        // removendo o primeiro item
+        if(node === head){
+            head = node.next
+            return true
+        }
+
+        // removendo demais ..
+        let currentNode = head
+        while(currentNode.next && currentNode.next != node){
+            currentNode = currentNode.next
+        }
+
+        currentNode.next = node.next
+        return true
+        
+    };
 
     // public
     return {
 
         length: () => length, //retorna o tamanho da lista
         add: (value) => add(value), //adiciona um novo nó
+        add2: (value) => add2(value),
         print: () => console.log(head), //imprime o head da lista
         getByIndex: (index) => getByIndex(index), // pega um valor pelo indice
-        getByValue: (value) => getByValue(value),
+        getByValue: (value) => getByValue(value), // pega um valor pelo proprio valor
+        remove: (node) => remove(node),
 
     };
 
@@ -84,17 +127,24 @@ function linkedList(){
 
 const list = linkedList();
 
-list.add(1);
-list.add(2);
-list.add(3);
+list.add2(1);
+list.add2(2);
+list.add2(3);
+list.add2(4);
 
-console.log(list.length());
 // list.print();
 
-console.log(list.getByIndex(0));
-console.log(list.getByIndex(1));
-console.log(list.getByIndex(2));
-console.log(list.getByIndex(3));
+let node = list.getByValue(3);
+list.remove(node)
+list.print();
 
-console.log(list.getByValue(2));
-console.log(list.getByValue(5));
+// console.log(list.length());
+// // list.print();
+
+// console.log(list.getByIndex(0));
+// console.log(list.getByIndex(1));
+// console.log(list.getByIndex(2));
+// console.log(list.getByIndex(3));
+
+// console.log(list.getByValue(2));
+// console.log(list.getByValue(5));
