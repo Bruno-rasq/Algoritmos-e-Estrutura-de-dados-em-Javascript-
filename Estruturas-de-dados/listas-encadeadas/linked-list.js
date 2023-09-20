@@ -107,7 +107,21 @@ function linkedList(){
 
         currentNode.next = node.next
         return true
-        
+
+    };
+
+    // testei uma coisa... limapando a lista, não sei se está correto mas funcionou
+    const clear = () => {
+        if(length === 0){
+            return null
+        }
+
+        head = null
+        tail = null
+        length = 0
+
+        return 
+
     };
 
     // public
@@ -120,6 +134,7 @@ function linkedList(){
         getByIndex: (index) => getByIndex(index), // pega um valor pelo indice
         getByValue: (value) => getByValue(value), // pega um valor pelo proprio valor
         remove: (node) => remove(node),
+        clear: () => clear(),
 
     };
 
@@ -129,14 +144,15 @@ const list = linkedList();
 
 list.add2(1);
 list.add2(2);
-list.add2(3);
-list.add2(4);
+// list.add2(3);
+// list.add2(4);
 
-// list.print();
-
-let node = list.getByValue(3);
-list.remove(node)
+// list.clear();
 list.print();
+
+// let node = list.getByValue(3);
+// list.remove(node)
+// list.print();
 
 // console.log(list.length());
 // // list.print();
