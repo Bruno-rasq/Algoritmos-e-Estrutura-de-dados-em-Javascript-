@@ -60,7 +60,7 @@ function Linked_list() {
 
         pop(){
 
-            if(size == 0){
+            if(size == 0 || head == null || head.next == null){
                 throw console.error('this list is empty');
             };
 
@@ -68,7 +68,20 @@ function Linked_list() {
             // HEAD >> NODE >> TAIL >> NODE
             // HEAD >> NODE >> TAIL
 
-           
+           let second_last = head;
+           while(second_last.next != tail){
+                second_last = second_last.next
+            }
+            
+            tail = second_last
+            second_last.next = null
+            size--
+            return head;
+
+        };
+
+        peek(){
+            return tail
         };
 
 
@@ -88,6 +101,12 @@ lista.push(4)
 lista.print();
 console.log(lista.length());
 console.log(lista.isEmpty());
+
+// lista.pop();
+lista.pop();
+console.log(lista.length());
+lista.print();
+console.log(lista.peek());
 
 // lista.clear();
 // lista.print();
