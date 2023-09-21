@@ -64,7 +64,11 @@ function Linked_list() {
                 throw console.error('this list is empty');
             };
 
-            console.log(tail);
+            // HEAD >> NODE >> NODE >> TAIL
+            // HEAD >> NODE >> TAIL >> NODE
+            // HEAD >> NODE >> TAIL
+
+           
         };
 
 
