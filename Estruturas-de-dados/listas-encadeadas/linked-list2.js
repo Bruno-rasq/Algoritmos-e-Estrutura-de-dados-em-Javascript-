@@ -6,7 +6,7 @@ function Linked_list() {
 
 
     class Node {
-        constructor(data){
+        constructor(data) {
             this.data = data;
             this.next = null;
         }
@@ -14,34 +14,34 @@ function Linked_list() {
 
     class publisList {
 
-        print(){
+        print() {
             console.log(head)
         };
 
-        length(){
+        length() {
             return size;
         };
 
-        isEmpty(){
+        isEmpty() {
             return size == 0 ? true : false
         };
 
-        clear(){
+        clear() {
 
-            if(size === 0){
+            if (size === 0) {
                 return null
             }
-    
+
             head = null
             tail = null
             size = 0
-    
-            return 
+
+            return
         };
 
-        push(value){
+        push(value) {
 
-            if(!head){
+            if (!head) {
 
                 head = new Node(value);
                 tail = head;
@@ -58,9 +58,9 @@ function Linked_list() {
 
         };
 
-        pop(){
+        pop() {
 
-            if(size == 0 || head == null || head.next == null){
+            if (size == 0 || head == null || head.next == null) {
                 throw console.error('this list is empty');
             };
 
@@ -68,11 +68,11 @@ function Linked_list() {
             // HEAD >> NODE >> TAIL >> NODE
             // HEAD >> NODE >> TAIL
 
-           let second_last = head;
-           while(second_last.next != tail){
+            let second_last = head;
+            while (second_last.next != tail) {
                 second_last = second_last.next
             }
-            
+
             tail = second_last
             second_last.next = null
             size--
@@ -80,9 +80,70 @@ function Linked_list() {
 
         };
 
-        peek(){
+        peek() {
             return tail
         };
+
+        getByIndex(index) {
+
+            if (size == 0 || index >= size) {
+                return null
+            };
+
+            let node = head
+            let count = 0;
+
+            while (count < index && node.next) {
+                node = node.next
+                count++
+            }
+
+            return node
+        };
+
+        getByValue(value) {
+
+            if (size == 0) {
+                return null
+            }
+
+            let node = head
+            if (node.data == value) {
+                return node
+            }
+
+            while (node.next) {
+                node = node.next
+                if (node.data === value) {
+                    return node
+                }
+            }
+
+            return null
+        };
+
+        remove(node) {
+
+            if (size === 0) {
+                return null
+            }
+
+            if (node == head) {
+                head = node.next
+                size--
+                return true
+            }
+
+            let currentNode = head
+            while (currentNode.next && currentNode.next != node) {
+                currentNode = currentNode.next
+            }
+
+            currentNode.next = node.next
+            size--
+            return true
+
+        }
 
 
     };
@@ -91,22 +152,65 @@ function Linked_list() {
 };
 
 
-let lista = Linked_list();
+//[ testando so Métodos ]:
 
+let lista = Linked_list(); // criação da linked-list
+
+//inserindo dados
 lista.push(1)
 lista.push(2)
+lista.push(5)
+lista.push(10)
 lista.push(3)
-lista.push(4)
 
+// printando a lista
 lista.print();
-console.log(lista.length());
-console.log(lista.isEmpty());
 
-// lista.pop();
+//verificando tamanho da lista
+console.log(lista.length());
+
+
+
+// removendo ultimo node da lista
 lista.pop();
-console.log(lista.length());
 lista.print();
-console.log(lista.peek());
+console.log(lista.length());
+/**
+ 
+    ENCONTREI UM BUG
+       - metodo pop() remove o ultimo elemento até se printando a lista primeiro e depois removido
 
-// lista.clear();
-// lista.print();
+       exm: 
+       lista.push('A')
+       lista.push('B')
+       lista.push('C')
+       lista.print()
+
+       A >> B  OBS: não deveria printar assim.. correto seria: A >> B >> C
+
+       lista.pop()
+       lista.print()
+
+       A >> B
+
+ */
+
+// ultimo node
+console.log(`Ultimo node: ${JSON.stringify(lista.peek())}`);
+
+
+// buscando pelo indice
+let Node = lista.getByIndex(2)
+console.log(Node);
+
+//buscando pelo valor
+let Value = lista.getByValue(10)
+if(Value != null){
+    console.log(`Este valor está na lista: ${JSON.stringify(Value)}`)
+} else {
+    console.log('Valor não encontrado')
+}
+
+// limpando a lista
+lista.clear()
+console.log(lista.length())
