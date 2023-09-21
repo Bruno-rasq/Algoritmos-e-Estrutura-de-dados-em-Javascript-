@@ -96,6 +96,7 @@ function linkedList(){
         // removendo o primeiro item
         if(node === head){
             head = node.next
+            length-- // esqueceu de decrementar o tamanho da lista
             return true
         }
 
@@ -106,6 +107,7 @@ function linkedList(){
         }
 
         currentNode.next = node.next
+        length--
         return true
 
     };
