@@ -9,3 +9,9 @@
 [lista encadeada ou ligada]:
 
     - lista encadeada é uma lista linear dispersa, isto é, os elementos não estão necessáriamente armazenados em sequencia na memeoria, porém a ordem lógica entre os elementos que compóem a lista é mantida
+
+
+[Checkout]:
+    - linkedList (simples) -check
+    - DoubleLinkedList - check
+    - circleLinkedList
