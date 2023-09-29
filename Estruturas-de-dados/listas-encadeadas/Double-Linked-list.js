@@ -33,7 +33,7 @@ function DoubleLinkedList() {
         };
         
 
-        // mostrar a lista
+        // mostrar a lista...
         print() {
             console.log(head)
         };
@@ -46,7 +46,7 @@ function DoubleLinkedList() {
                     arr[i] = current.data;
                     current = current.next
                 }
-                return console.log(arr)
+                return arr
             } else {
                 return null
             }
@@ -60,14 +60,14 @@ function DoubleLinkedList() {
                     arr[i] = current.data;
                     current = current.previous
                 }
-                return console.log(arr)
+                return arr
             } else {
                 return null
             }
         };
 
-        //adicionar elementos a lista
 
+        //adicionar elementos a lista...
         unshift(value){
             let node = new Node(value)
             node.next = head
@@ -92,11 +92,41 @@ function DoubleLinkedList() {
             }
             tail = node
             size++
-        }
+        };
+
+        insertIn(value, index){
+            if(index > 0 && index < size){
+                let node = new Node(value)
+                let current = head
+                let i = 0
+
+                while(i++ < index){
+                    current = current.next
+                }
+
+                current.previous.next = node
+                node.next = current
+                node.previous = current.previous
+                current.previous = node
+
+                size++
+
+            } else if (index < 1) {
+                this.unshift(value)
+            } else if (index > size) {
+                this.push(value);
+            }
+
+        };
+
+        //removendo elementos da lista...
     };
 
     return new publicList()
 };
+
+
+// testando ......
 
 let Test = DoubleLinkedList();
 
@@ -105,11 +135,17 @@ Test.push(2)
 Test.push(3)
 Test.push(4)
 
-Test.printALL();
-Test.printALLReverse();
+console.log(Test.printALL());
+console.log(Test.printALLReverse());
 
 Test.unshift(8);
 Test.push('B');
 
-Test.printALL();
+console.log(Test.printALL());
+console.log(`Head: ${Test.getHead()}`);
+console.log(`tail: ${Test.getTail()}`);
+console.log(`size: ${Test.length()}`);
 
+Test.insertIn('A', 3);
+console.log(Test.printALL());
+Test.print();
