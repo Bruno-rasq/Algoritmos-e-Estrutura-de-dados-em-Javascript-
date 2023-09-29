@@ -119,7 +119,55 @@ function DoubleLinkedList() {
 
         };
 
+
         //removendo elementos da lista...
+        shift(){
+            if(head){
+                head = head.next
+                size--
+            }
+
+            if(size === 0){
+                tail = null
+            } else {
+                head.previous = null
+            }
+        };
+
+        pop(){
+            if(head){
+                if(size === 1){
+                    head = null
+                    tail = null
+                } else {
+                    tail.previous.next = null
+                    tail = tail.previous
+                }
+
+                size--
+            }
+        };
+
+        removeIn(index){
+            if(index > 0 && index < size-1){
+                let current = head
+                let i = 0
+
+                while(i++ < index){
+                    current = current.next
+                }
+
+                current.previous.next = current.next
+                current.next.previous = current.previous
+
+                size--
+
+            } else if (index < 1) {
+                this.shift()
+            } else {
+                this.pop();
+            }
+        };
     };
 
     return new publicList()
@@ -149,3 +197,10 @@ console.log(`size: ${Test.length()}`);
 Test.insertIn('A', 3);
 console.log(Test.printALL());
 Test.print();
+
+Test.pop()
+console.log(`Ultimo elem removido: ${Test.printALL()}`)
+Test.shift()
+console.log(`primeiro elem removido: ${Test.printALL()}`)
+Test.removeIn(2)
+console.log(`removido elem de indice 2: ${Test.printALL()}`)
