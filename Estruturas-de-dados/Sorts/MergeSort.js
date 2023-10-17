@@ -29,7 +29,6 @@ function Merge(leftArr, rightArr){
 const array = [-3, 5, 1, 0, -2, 44];
 console.log(MergeSort(array));
 
-
 /*
     complexidade: O(nLogn)
 */
