@@ -23,3 +23,11 @@ function QuickSort(arr){
 
 let array = [-2, 4, 1, 22, -3, 4];
 console.log(QuickSort(array))
+
+/*
+    complexidade:
+
+    melhor caso => O(n^2)
+    media => O(nLogN)
+    
+ */
