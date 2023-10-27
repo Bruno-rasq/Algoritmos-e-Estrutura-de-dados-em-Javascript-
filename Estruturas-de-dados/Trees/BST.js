@@ -101,6 +101,48 @@ class BST { //Binary Search Tree
     toString(){
         return JSON.stringify(this.root)
     };
+
+    InOrder(){
+        if(this.root === null) return null;
+
+        const nodeList = []
+        const Traverse = function(current){
+            if(current.left) Traverse(current.left)
+            nodeList.push(current.data)
+            if(current.right) Traverse(current.right)
+        };
+
+        Traverse(this.root);
+        return nodeList;
+    };
+
+    PosOrder(){
+        if(this.root === null) return null;
+
+        const nodeList = []
+        const Traverse = function(current){
+            if(current.left) Traverse(current.left)
+            if(current.right) Traverse(current.right)
+            nodeList.push(current.data)
+        };
+
+        Traverse(this.root);
+        return nodeList;
+    };
+
+    PreOrder(){
+        if(this.root === null) return null;
+
+        const nodeList = []
+        const Traverse = function(current){
+            nodeList.push(current.data)
+            if(current.left) Traverse(current.left)
+            if(current.right) Traverse(current.right)
+        };
+
+        Traverse(this.root);
+        return nodeList;
+    };
 };
 
 const Binary_tree = new BST()
@@ -118,6 +160,9 @@ console.log(Binary_tree.search(3))
 console.log(Binary_tree.search(30))
 
 
-Binary_tree.remove(20)
-Binary_tree.remove(5)
+// Binary_tree.remove(20)
+// Binary_tree.remove(5)
 console.log(Binary_tree)
+console.log(Binary_tree.InOrder())
+console.log(Binary_tree.PreOrder())
+console.log(Binary_tree.PosOrder())
