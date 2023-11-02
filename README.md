@@ -4,4 +4,4 @@
 utilizando a linguagem de programação Javascript. </p>
 
 ## license 
-![License](https://img.shields.io/github/license/dyarleniber/react-workflow-gh-actions)
+![License](https://img.shields.io/github/license/Bruno-rasq/Algoritmos-e-Estrutura-de-dados-em-Javascript-)
