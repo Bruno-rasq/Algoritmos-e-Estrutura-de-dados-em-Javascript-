@@ -119,6 +119,7 @@ function crearElement(id, date){
     input.classList.add('your-input');
     saveBTN.classList.add('impossible');
     deleteBTN.classList.add('possible');
+    deleteBTN.classList.add('delete');
 
     saveBTN.textContent = "Salvar";
     deleteBTN.textContent = "Deletar";
