@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    overflow-x: hidden;
+
+}
+
+.title{
+    margin: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title::after{
+    display: block;
+    content: "";
+    height: 3px;
+    width: 30%;
+    margin-top: 10px;
+    background-color: lightgray;
+}
+
+.add-names{
+    
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 10px;
+    gap: 30px;
+
+}
+
+#add_data, .delete{
+
+    height: 45px;
+    width: 135px;
+    border: none;
+    border-radius: 5px;
+
+    
+    background-color: rgb(205, 50, 115);
+    color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+
+}
+
+#add_data:hover, .delete:hover{
+
+    background-color: rgb(184, 55, 109);
+}
+
+.add_input{
+
+    width: 245px;
+    padding-inline: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+    background-color: lightgray;
+    color: black;
+}
+
+.dates{
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    margin-block: 18px 9vh;
+    margin-inline: auto;
+    max-width: 35vw;
+    height: 400px;  /* trocar value para fit-content ou add overflow-y: auto*/
+
+    background-color: rgb(228, 228, 228);
+
+}
+
+/* Utilitarios */
+
+.impossible{
+    display: none;
+}
+
+.possible{
+    height: 45px;
+    width: 135px;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    
+    background-color: transparent;
+    color: black;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+    cursor: pointer;
+}
+
