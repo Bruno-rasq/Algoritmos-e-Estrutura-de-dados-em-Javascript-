@@ -143,21 +143,23 @@ class BST { //Binary Search Tree
         Traverse(this.root);
         return nodeList;
     };
+
 };
 
 const Binary_tree = new BST()
-Binary_tree.add(20)
-Binary_tree.add(2)
-Binary_tree.add(5)
-Binary_tree.add(17)
+
+Binary_tree.add('a')
+Binary_tree.add('g')
+Binary_tree.add('e')
+Binary_tree.add('q')
 
 console.log(Binary_tree.toString())
-console.log(Binary_tree)
+// console.log(Binary_tree)
 
-console.log(Binary_tree.search(2))
-console.log(Binary_tree.search(17))
-console.log(Binary_tree.search(3))
-console.log(Binary_tree.search(30))
+// console.log(Binary_tree.search(2))
+// console.log(Binary_tree.search(17))
+// console.log(Binary_tree.search(3))
+// console.log(Binary_tree.search(30))
 
 
 // Binary_tree.remove(20)
