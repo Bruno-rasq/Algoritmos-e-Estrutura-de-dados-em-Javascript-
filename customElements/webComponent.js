@@ -30,7 +30,7 @@ class starRater extends HTMLElement {
 
         const rater = document.createElement('div')
         rater.classList.add('star-rater')
-        // rater.addEventListener('mouseout', this.resetRating().bind(this))
+        rater.addEventListener('mouseout', this.resetRating.bind(this))
 
         return rater
     }
@@ -63,8 +63,7 @@ class starRater extends HTMLElement {
     setRating(event)
     {
         this.setAttribute(
-            'data-rating', event.currentTarget.
-            getAttribute('data-value')
+            'data-rating', event.currentTarget.getAttribute('data-value')
         )
     }
 
