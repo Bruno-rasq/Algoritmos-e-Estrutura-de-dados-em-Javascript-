@@ -9,17 +9,16 @@
 
 */
 //[RESPOSTA - 01]
-function anagramDetector(str1, str2){
+function anagramDetector(str1, str2) {
 
     let word1 = str1.split('');
     let word2 = str2.split('');
 
-    if(word1.length == word2.length){
-        const response = word1.some((el) => word2.includes(el));
-        return response;
-    } else {
-        return false;
-    }
+    let response = word1.every((char) => {
+        return word2.includes(char)
+    })
+
+    return response
 }
 
 anagramDetector("car", "arc");
@@ -36,7 +35,7 @@ anagramDetector("race", "car");
     test 2 -> "aAbBcC" => false
 
 */
-function hasUniqueCharacter(str){
+function hasUniqueCharacter(str) {
 
     let NoReps = str.replace(/(.)(?=.*\1)/gi, "");
     let response = str.length == NoReps.length ? true : false;
@@ -63,23 +62,23 @@ function compressString(str) {
     let compress = ""
     let matriz = str.split("");
 
-    for(let i = 0; i < matriz.length; i++){
-       let count = 1
-       let current = matriz[i]
+    for (let i = 0; i < matriz.length; i++) {
+        let count = 1
+        let current = matriz[i]
 
-       while( i < matriz.length && matriz[i] == matriz[i+1]){
-        count++
-        i++
-       }
+        while (i < matriz.length && matriz[i] == matriz[i + 1]) {
+            count++
+            i++
+        }
 
-       if(count !== 1){
-        compress += current + count;
-       } else {
-        compress += current
-       }
+        if (count !== 1) {
+            compress += current + count;
+        } else {
+            compress += current
+        }
 
     }
-    
+
     return console.log(compress)
 }
 
@@ -99,6 +98,20 @@ compressString("aaabbbccccc");
 
 */
 
+function twoSum(arr, n) {
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.lenght; j++) {
+
+            if (arr[i] === arr[j]) {
+                return [i, j]
+            }
+        }
+    }
+
+    return -1;
+}
+
 /*
     05 - romeve duplicates
     @function removeDups(str)
@@ -109,9 +122,9 @@ compressString("aaabbbccccc");
 
 */
 //[RESPOSTA - 05]
-function removeDups(str){
+function removeDups(str) {
     let response = str.replace(/(.)(?=.*\1)/g, "")
-    return console.log(response);
+    return response;
 }
 
 removeDups("abcdef");
@@ -129,6 +142,36 @@ removeDups("abccdeefkkk");
 
 */
 
+function Matriz(str1, str2) {
+    return Array.from({ length: str1.length + 1 }, () => {
+        Array(str2.length + 1).fill(0)
+    })
+}
+
+function logCommonSub(str1, str2) {
+
+    let matriz = Matriz(str1, str2);
+    let MC = 0; // maior comprimento
+    let FMS = 0; // fim maior sequencia
+
+    for (let i = 0; i <= str1.length; i++) {
+        for (let j = 0; j <= str2.length; j++) {
+
+            if (str1[i - 1] === str2[j - 1]) {
+                matriz[i][j] = matriz[i - 1][j - 1] + 1;
+
+                if (matriz[i][j] > MC) {
+                    MC = matriz[i][j]
+                    FMS = i - 1
+                }
+            }
+        }
+    }
+
+    if (MC === 0) return -1;
+
+    return str1.substring(FMS - Mc + 1, FMS + 1)
+}
 
 /*
     07 - valid parentheses
@@ -141,7 +184,7 @@ removeDups("abccdeefkkk");
 
 */
 //[RESPOSTA -07]
-function validParentheses(str){
+function validParentheses(str) {
 
     let openParentheres = str.split('').filter((char) => {
         return char == "(";
@@ -151,11 +194,7 @@ function validParentheses(str){
         return char == ")";
     });
 
-    if( openParentheres.length == closeparentheses.length){
-        return console.log(true);
-    } else {
-        return console.log(false)
-    };
+    return openParentheres.length == closeparentheses.length
 
 }
 
@@ -176,17 +215,25 @@ validParentheses("()(");
 //[RESPOSTA - 08]
 function nextBiggerNumber(n) {
 
-    let number = n.toString();
-    let arr = number.split('');
+    let characteres = Array.from(String(n))
 
-    let [f, ...rest] = arr;
-    let req = f + rest.sort((a, b) => b - a).join("");
-
-    if (req == n) {
-        return console.log(-1)
-    } else {
-        return console.log(parseInt(req))
+    let i = characteres.length - 2;
+    while( i >= 0 && characteres[i] >= characteres[i + 1]){
+        i--;
     }
+
+    if(i === 1 ) return -1
+
+    let j = characteres.length - 1;
+    while( characteres[j] <= characteres[i]){
+        j--;
+    }
+
+    [characteres[i], characteres[j]] = [characteres[j], characteres[i]]
+
+    let rest = characteres.slice(i + 1).reverse();
+
+    return Number(characteres.slice(0, i + 1).concat(rest).join(''))
 
 }
 
@@ -205,6 +252,8 @@ nextBiggerNumber(999);
 */
 function romanNumerals(n) {
 
+    if (n <= 0) return -1
+
     const RomanNumberMap = {
         u: ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"], //Unidade
         d: ["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"], //Dezena
@@ -212,27 +261,22 @@ function romanNumerals(n) {
         m: ["M", "MM", "MMM", "MMMM", "MMMMM"] // Milhar
     };
 
-    if (n > 0 && n < 5999) {
-        let str = Number(n).toString();
-        let arry = str.split('').reverse();
 
-        let uni = Number(arry[0]);
-        let dez = Number(arry[1]);
-        let cen = Number(arry[2]);
-        let mil = Number(arry[3]);
+    let str = String(n);
+    let arry = Array.from(str).reverse();
 
-        arry[0] = RomanNumberMap.u[uni - 1] ?? "";
-        arry[1] = RomanNumberMap.d[dez - 1] ?? "";
-        arry[2] = RomanNumberMap.c[cen - 1] ?? "";
-        arry[3] = RomanNumberMap.m[mil - 1] ?? "";
+    let uni = Number(arry[0]);
+    let dez = Number(arry[1]);
+    let cen = Number(arry[2]);
+    let mil = Number(arry[3]);
 
-        let response = arry.reverse().join('');
+    arry[0] = RomanNumberMap.u[uni - 1] ?? "";
+    arry[1] = RomanNumberMap.d[dez - 1] ?? "";
+    arry[2] = RomanNumberMap.c[cen - 1] ?? "";
+    arry[3] = RomanNumberMap.m[mil - 1] ?? "";
 
-        return console.log(response);
+    return arry.reverse().join('');
 
-    } else {
-        return console.error("valor inválido")
-    };
 }
 
 /*
@@ -247,9 +291,9 @@ function romanNumerals(n) {
 
 */
 //[RESPOSTA - 010]
-function pigLatin(str){
+function pigLatin(str) {
     let word = str.split('');
-    let inicial = word.splice(0,1);
+    let inicial = word.splice(0, 1);
 
     let response = word.join('') + inicial + "ay"
     return console.log(response)
