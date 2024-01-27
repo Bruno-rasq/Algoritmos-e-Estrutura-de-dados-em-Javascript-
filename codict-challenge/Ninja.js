@@ -29,6 +29,32 @@ ransomNote("note", "onenote")
 */
 //[RESPOSTA - 02]
 
+function dominantNumber(arr){
+
+    let n = arr.length;
+    let count = {};
+
+    for(let i = 0; i < n; i++){
+        let element = arr[i]
+        count[element] =  (count[element] || 0) + 1;
+    }
+
+    let EMF; // elemento mais frequente
+    let FM = 0; // frequencia maxima
+
+    for(const ele in count){
+        if(count[ele] > FM){
+            FM = count[ele];
+            EMF = ele
+        }
+    }
+
+    return FM > (n/2) ? EMF : -1;
+}
+
+dominantNumber([2, 2, 1, 1, 1, 1, 1, 2])
+dominantNumber([2, 10, 10, 10, 7, 10, 2])
+
 
 /*
     03 - coin Change
@@ -152,13 +178,37 @@ compareVersions("2.0.0", "1.0.0")
 /*
     06 - sum of Fibonacci
     @function sumFibonacci(n)
-   
+    crie uma função que compute um valor n em uma sequencia de Fibonacci, onde
+    cada valor na sequencia é a soma dos tres valores anteriores na sequencia
 
     test 1 -> (1) => 1
     test 2 -> (3) => 5
 
 */
 //[RESPOSTA - 06]
+
+function sumFibonacci(n){
+
+    let fibo = []
+
+    if(n <= 0) return 0;
+
+    fibo[0] = 0
+    fibo[1] = 1
+
+    let sum = fibo[0] + fibo[1]
+
+    for(let i = 2; i <= n; i++){
+
+        fibo[i] = fibo[i - 1] + fibo[i - 2]
+        sum += fibo[i]
+    }
+
+    return sumOfIntervals
+}
+
+sumFibonacci(1)
+sumFibonacci(5)
 
 
 /*
